@@ -11,7 +11,12 @@ $ git init
 ```
 
 Para verificar o estado do repositório, como por exemplo qual é a branch, quantos commits foram feitos e os arquivos, entre outroas informações, utiliza-se o comando `git status`
-
+Os arquivos denominados como "Untracked files" são arquivos que ainda não estão sendo monitorados no GIT.
 ```
 $ git status
+```
+Para o arquivo passar à ser monitorado, utilizamos o `git add` e o nome do arquivo. Ao utilizar o "." após o comando, o Git passa a monitorar todos os arquivos do repositório.
+O arquivo passa à poder ser commitado.
+```
+$ git add index.html
 ```
