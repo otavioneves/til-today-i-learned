@@ -20,3 +20,7 @@ O arquivo passa à poder ser commitado.
 ```
 $ git add index.html
 ```
+Algumas informações importantes aparecem ao executar o comando `git status`, são elas:<br><br>
+- HEAD: Estado atual do código;
+- Working tree: Local onde os arquivos realmente estão sendo armazenados e editados
+- index: Local onde o Git armazena o que será commitado, ou seja, o local entre a working tree e o repositório Git em si.
