@@ -3,7 +3,7 @@ O arquivo passa à poder ser commitado.
 ```
 $ git add index.html
 ```
-Para fazer um commit, o arquivo preciso ter sido adicionado na monitoração do git através do `git add`. Com o arquivo já monitorado, usamos o comando `git commit` com a seguinte sintaxe:
+Para fazer um commit, o arquivo preciso ter sido adicionado, ou atualizado, na monitoração do git através do `git add`. Com o arquivo já monitorado e atualizado, usamos o comando `git commit` com a seguinte sintaxe:
 ```
 $ git commit -m "Criando o arquivo index.html com lista inicial"
 ```
