@@ -3,4 +3,3 @@ Ao digitar os comandos, caso o comando tenha sido executado corretamente, geralm
 Os prompts de comando no linux são:<br><br>
 "$" usuário comum<br><br>
 "#" usuário root<br><br>
-Os interpretadores são muito criteriosos, ou seja, o que for passado para eles via comando, ele executará e na maioria das vezes caso você não avise por algum parâmetro, executará sem perguntar. Por isso, existe uma sintaxe para os comandos, para que as informações sejam passadas corretamente, desse modo, executando corretamente o que quer ser feito.
