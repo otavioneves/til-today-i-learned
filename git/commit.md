@@ -12,4 +12,5 @@ O comando é seguido do parâmetro `-m`, que informa ao comando que irá ser pas
 A cada commit feito é necessário comentar o que está sendo feito, sendo que o ideal é que a quantidade de alterações sejam significativas, e algum progesso no projeto tenha sido alcançado, desse modo, deixando os log de commits limpos e de fácil utilização caso necessário.<br><br>
 
 O comando `git add` "serve para começar a rastrear arquivos e também para outras coisas, como marcar arquivos que estão em conflito de mesclagem como resolvidos.Pode ser útil pensar nesse comando mais como “adicione este conteúdo ao próximo commit”." Documentação do GIT SCM.<br><br>
-Quando um arquivo é alterado após ser colocado no stage, o arquivo fica constando como stage e unstage, pois o que está pronto para ser commitado é o que foi adicionado pelo `git add`, sendo necessário refazê-lo com a versão nova.
+Quando um arquivo é alterado após ser colocado no stage, o arquivo fica constando como stage e unstage, pois o que está pronto para ser commitado é o que foi adicionado pelo `git add`, sendo necessário refazê-lo com a versão nova.<br>
+O ideal é commitar sempre que alguma função for criada, ou algum bug for resolvido, etc. Ou seja, quando algum marco importante do projeto seja alcançado.
