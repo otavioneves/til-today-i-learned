@@ -1,5 +1,5 @@
 # 📝 TIL - Today I Learned
-Today I Learned - A collection a small topics that I learn about languages, technologies and tools.<br><br>
+Today I Learned - A collection a small topics that I learn about languages, technologies and tools.<br>
 Hoje eu aprendi - Uma coleção de pequenos tópicos que eu aprendo sobre linguagens, tecnologias e ferramentas.
 
 ### Categories
