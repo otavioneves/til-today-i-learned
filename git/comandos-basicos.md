@@ -15,14 +15,14 @@ Os arquivos denominados como "Untracked files" são arquivos que ainda não est�
 ```
 $ git status
 ```
-Algumas informações importantes aparecem ao executar o comando `git status`, são elas:<br><br>
+Algumas informações importantes aparecem ao executar o comando `git status`, são elas:<br>
 - HEAD: Estado atual do código;
 - Working tree: Local onde os arquivos realmente estão sendo armazenados e editados
-- index: Local onde o Git armazena o que será commitado, ou seja, o local entre a working tree e o repositório Git em si.<br><br>
+- index: Local onde o Git armazena o que será commitado, ou seja, o local entre a working tree e o repositório Git em si.<br>
 Para o arquivo passar à ser monitorado, utilizamos o `git add` e o nome do arquivo. Ao utilizar o "." após o comando, o Git passa a monitorar todos os arquivos do repositório.
 O arquivo passa à poder ser commitado.
 ```
 $ git add index.html
 ```
-O comando `git add` "serve para começar a rastrear arquivos e também para outras coisas, como marcar arquivos que estão em conflito de mesclagem como resolvidos.Pode ser útil pensar nesse comando mais como “adicione este conteúdo ao próximo commit”." Documentação do GIT SCM.<br><br>
+O comando `git add` "serve para começar a rastrear arquivos e também para outras coisas, como marcar arquivos que estão em conflito de mesclagem como resolvidos.Pode ser útil pensar nesse comando mais como “adicione este conteúdo ao próximo commit”." Documentação do GIT SCM.<br>
 Quando um arquivo é alterado após ser colocado no stage, o arquivo fica constando como stage e unstage, pois o que está pronto para ser commitado é o que foi adicionado pelo `git add`, sendo necessário refazê-lo com a versão nova.

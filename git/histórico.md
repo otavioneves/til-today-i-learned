@@ -1,4 +1,4 @@
-Para verificar o histórico usamos o `git log`. Esse comando apresenta algumas informações como o Hash dos commits, o autor, a data e o título do commit.<br><br>
+Para verificar o histórico usamos o `git log`. Esse comando apresenta algumas informações como o Hash dos commits, o autor, a data e o título do commit.<br>
 Algumas outras maneiras de ver esse log, são utilizando alguns parâmetros após o `git log`:
 - `--oneline`: apresenta algumas informações dos commits no histórico em apenas uma linha;
 - `-p`: apresenta mais informações dos commits no histórico, como as alterações feitas.

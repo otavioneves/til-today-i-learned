@@ -1,0 +1,1 @@
+Para trazer os dados de um repositório, pela primeira vez, no seu computador, utiliza-se o comando `git clone` seguido do endereço do repositório, e se necessário, pode definir um nome para o repositório criado.
