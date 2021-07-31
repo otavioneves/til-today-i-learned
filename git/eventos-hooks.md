@@ -1,0 +1,2 @@
+Os git hooks são eventos para criados para acontecer mediante alguma ação, ou seja, sempre que certa ação acontecer, certo evento é executado.<br>
+Os eventos são sempre relacionados aos exemplos presentes na pasta /git/hooks. Os hooks são em shell script e desse modo, podemos desenvolver o script para execução desse evento. Os hooks são nomeados com os nomes presentes no /git/hooks sem o ".sample" e criados dentro dessa mesma pasta.<br>
