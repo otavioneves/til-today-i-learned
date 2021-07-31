@@ -1,0 +1,1 @@
+Para encontrar o usuário responsável por uma linha do código, ou por uma alteração, etc, utiliza-se o comando `git blame` seguido do nome do arquivo.

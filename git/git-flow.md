@@ -1,0 +1,5 @@
+Uma forma de organização de branchs que facilita resolução de conflitor é o Git Flow. Com o git flow, a branch serve apenas para receber os commits que estão prontos para ir para produção e após esses commits, são criadas as tags.<br>
+A partir da branch master é criada a branch de desenvolvimento, e a partir dela, criada as branchs de features, de funcionalidades.<br>
+Quando as funcionalidades foram terminadas, todas estarão commitadas na branch de desenvolvimento. Após isso, podemos criar a branch de release, quando o código está em um estado pronto para ser lançado uma nova versão. Após correção de possíveis bugs, lança-se uma nova versão na master.<br>
+Quando se deseja corrigir um erro de um código que está na master, cria-se uma branch de hotfix para essa correção. Após corrigido, faz-se um merge para a master, cria-se uma tag, criando uma nova versão, e também faz-se um merge para a branch de desenvolvimento, pois ela também irá se beneficiar dessa correção.<br>
+Dentro da branch de release, pode-se apenas corrigir bugs ainda dentro dela. Para desenvolvimento, volta para branch de desenvolvimento.

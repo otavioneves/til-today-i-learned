@@ -2,3 +2,4 @@ As branches ("ramos") são utilizadas para desenvolver funcionalidades isoladas 
 Para criar uma branch, usa-se o comando `git branch`, seguido do nome à ser dado.<br>
 Para verificar qual as branchs de um repositório, usa-se apenas o comando `git branch`.<br>
 Para mudar de branch, usa-se `git checkout`, seguido do nome do branch à ser escolhido.<br>
+Para excluir um branch usa=se o `git branch -d` ou `git branch -D` para quando a branch está à frente da master.<br>
