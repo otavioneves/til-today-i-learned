@@ -1,0 +1,3 @@
+Para gerar uma versão, ou seja, seja colocado um marco considerando que é uma versão 0.1, 0.2, 0.3, etc. Esse marco é chamado de tag. Para criar uma tag utiliza-se o `git tag -a` seguido do nome da tag, por exemplo, v0.1.0. Adicionado o `-m`, podemos colocar um comentário nessa tag.<br>
+Para enviar a tag para o git hub, utiliza-se o comando `git push origin` seguido do nome que foi colocado na tag, podendo ser vista no GitHub na área de releases, ou seja, uma versão.<br>
+No GitHub é possível ver em qual commit foi feito a release e essa release pode ser baixada, com o código no exato ponto em que foi feita a tag.
