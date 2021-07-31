@@ -11,6 +11,18 @@ Hoje eu aprendi - Uma coleção de pequenos tópicos que eu aprendo sobre lingua
 - [Comandos básicos](git/comandos-basicos.md)
 - [Commits](git/commit.md)
 - [Histórico do Git](git/historico.md)
+- [Boas práticas no uso do Git](boas-praticas.md)
+- [Tags e Releases](tags-e-realeases.md)
+- [Branches](branch.md)
+- [Clone](clonar-repositorio.md)
+- [Desfazendo alterações](desfazendo-alteracoes.md)
+- [Diff](diff.md)
+- [Log](histórico.md)
+- [Merge](merge.md)
+- [Push e Pull](push-pull.md)
+- [Rebase](rebase.md)
+- [Stash](stash.md)
+- [Repositórios remotos](repositorio-remoto.md)
 - [Ignorar arquivos e pastas](git/ignorar-arquivos.md)
 
 ### Linux
