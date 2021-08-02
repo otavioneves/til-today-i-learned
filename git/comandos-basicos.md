@@ -4,14 +4,14 @@ Para navegar até um repositório usa-se ou o bash do Git ou do o bash do Linux/
 $ cd/Documents/project1
 ```
 
-Para inicializar esse repositório no Git, de modo que a partir deste comando o Git poderá gerenciar as modificações realizadas nos arquivos, é o comando utilizado é o `git init`
+Para inicializar esse repositório no Git, de modo que a partir deste comando o Git possa gerenciar as modificações realizadas nos arquivos, utilizamos o comando utilizado o `git init`
 
 ```
 $ git init
 ```
 
-Para verificar o estado do repositório, como por exemplo qual é a branch, quantos commits foram feitos e os arquivos, entre outroas informações, utiliza-se o comando `git status`
-Os arquivos denominados como "Untracked files" são arquivos que ainda não estão sendo monitorados no GIT.
+Para verificar o estado do repositório, como por exemplo a branch atual, quantidade de commits feitos e as mensagens sobre os arquivos alterados ou criados, entre outras informações, utilizamos o comando `git status`.
+Os arquivos denominados como "Untracked files" são arquivos que ainda não estão sendo monitorados pelo Git.
 ```
 $ git status
 ```

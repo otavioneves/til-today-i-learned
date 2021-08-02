@@ -1,6 +1,7 @@
-Uma boa prática no Git, que aumenta a facilidade de análise de commits, código e log, é executar os commits de maneira precisa e em pouca quantidade. Principalmente ao enviar um pull request, ter muitos commits pode atrapalhar na hora da análise. Para "juntar" commits é utilizado o rebase. Com o `git rebase` seguido de `-i` e o commit inicial e o final.<br>
-Após a execução desse comando, aparece uma tela aonde podemos selecionar quais commits serão "juntados", ou `squash`, e quais permanecerão fixos, ou `pick`. Para alterar de pick para squash, apaga-se o pick e escreve-se apenas `s`, de squash.<br>
-Após juntar os commits, é necessário dar uma nova mensagem ao commit novo gerado.<br>
-evisar um único commit é bem mais fácil e rápido do que analisar diversos commits que resolvem um problema em comum. Por isso, nestes casos, é interessante utilizar o `git rebase -i`.<br>
-Uma boa prática se tratando de quais e quantas branchs é o ideal de se ter em um projeto, é ter por exemplo uma branch de desenvolvimento, e cada funcionalidade que irá ser adicionada ser feita em uma branch dessa branch de desenvolvimento.<br>
+Uma boa prática no Git, que aumenta a facilidade de análise de commits, código e log, é executar poucos e precisos commits. Muitos commits atrapalham, por exemplo, no envio de um pull request, pois atrapalha a análise.<br>
+Para "juntar" commits é utilizado o rebase. O `git rebase` é seguido de `-i` e o commit inicial e o final à ser compilado em um único commit.<br>
+Após a execução desse comando, aparece uma tela aonde podemos selecionar quais commits serão "juntados" (`squash`) e quais permanecerão fixos (`pick`). Para alterar de pick para squash, apaga-se o pick e escreve-se apenas `s`, de squash.<br>
+Após juntar os commits, é necessário definir uma nova mensagem ao novo commit gerado.<br>
+Revisar um único commit, que abranja alterações semelhantes, é mais fácil e rápido do que analisar diversos commits que resolvem um problema em comum. Por isso, nestes casos, é interessante utilizar o `git rebase -i`.<br>
+Uma boa prática se tratando de branchs em um projeto, é utilizar uma branch de desenvolvimento, e a cada funcionalidade ou task que será feita, abrimos uma nova branch.<br>
 Outra boa prática é não commitar na master. Mesmo que seja uma alteração pequena, o ideal é criar uma outra branch para alteração e depois mergear para a master.
