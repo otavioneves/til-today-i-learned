@@ -1,2 +1,2 @@
-Para enviar os dados de um repositório para outro, utiliza-se o comando `git push`, "empurrando" os dados de um repositório para outro. A sintaxe desse comando é formado por `git push`, seguido do repositório que receberá os arquivos e a branch.
-Para receber os dados de um outro repositório, utiliza-se o comando `git pull`, "puxando" os dados desse repositório. A sintaxe é a mesma, o comando seguido do repositório remoto e a branch.
+Para enviar os dados de um repositório para outro utilizamos o comando `git push`, "empurrando" os dados para esse repositório. A sintaxe desse comando é formado por `git push`, seguido do repositório que receberá os arquivos e a branch.
+Para receber os dados de um outro repositório, utilizamos o comando `git pull`, "puxando" os dados desse repositório. A sintaxe é a mesma: o comando seguido do repositório remoto e a branch.

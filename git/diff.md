@@ -1,4 +1,4 @@
-Para verificar a diferença entre dois commits, utiliza-se o comando `git diff` seguido dos hashs à serem comparados, separados por ponto ponto.<br>
+Para verificar a diferença entre dois commits, utilizamos o comando `git diff` seguido dos hashs à serem comparados, separados por ponto ponto.<br>
 ```
 $ git diff 1234567..1234567
 ```
