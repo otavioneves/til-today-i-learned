@@ -3,5 +3,8 @@
 - CTRL+3 = abre a janela para criar ou modificar vários itens;
 - Alt+Seta pra cima ou Seta para baixo = sobe ou desce um bloco selecionado;
 - CTRL+SHIFT+F = faz a identação automaticamente;
-- Ctrl+Shift+O = faz a importação de um modelo;
-- Ctrl+Spacebar = completa alguma abreviação;
+- Ctrl+Shift+O = faz a importação de um modelo, biblioteca, etc;
+- Ctrl+Spacebar = completa alguma abreviação ou da as opções do que ja pode ser preenchido baseado no código já escrito;
+- Ctrl+Alt+Seta para cima ou Seta para baixo = copia um bloco selecionado para cima ou para baixo;
+- Ctrl+2+l = cria uma variável na seleção;
+- Ctrl+Shift+T = realiza buscas por texto digitado;
