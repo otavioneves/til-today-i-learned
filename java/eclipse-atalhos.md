@@ -8,3 +8,4 @@
 - Ctrl+Alt+Seta para cima ou Seta para baixo = copia um bloco selecionado para cima ou para baixo;
 - Ctrl+2+l = cria uma variável na seleção;
 - Ctrl+Shift+T = realiza buscas por texto digitado;
+- Ctrl+Shift+C = deixa todas as linhas como comentários (//)

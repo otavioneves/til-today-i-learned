@@ -6,8 +6,8 @@ Short: de -32768 até 32767
 Integer: de -2147483648 até 2147483647 \\mais utilizado para números inteiros\\
 Long: de -9,223372037×10¹⁸ até 9,223372037×10¹⁸, seguido da letra "L"
 - DECIMAIS
-Float - separado por ".", seguido da letra "f"
-Double - separado por "."
+Float - obrigatoriamente com os decimais separados por ".", seguido da letra "f", mesmo que for 0
+Double - obrigatoriamente com os decimais separado por ".", mesmo que for 0
 
 ### Texto
 Character - 1 caracter
