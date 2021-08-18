@@ -1,0 +1,1 @@
+Vetores, ou arrays, são variáveis que podem guardar mais de um valor.
