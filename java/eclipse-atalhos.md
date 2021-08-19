@@ -9,3 +9,4 @@
 - Ctrl+2+l = cria uma variável na seleção;
 - Ctrl+Shift+T = realiza buscas por texto digitado;
 - Ctrl+Shift+C = deixa todas as linhas como comentários (//)
+- Alt+Shift+R = para alterar a mesma palavra em todos os lugares do código ao mesmo tempo
