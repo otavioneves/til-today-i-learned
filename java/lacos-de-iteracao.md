@@ -45,3 +45,9 @@ Exemplo:
 			i++;
 		}
 ```
+- do while: nessa estrutura a mudança é que fazemos o bloco, para depois verificar novamente a condição. No while, verifica-se a confição inicialmente, para depois executar o laço.
+```
+		do {
+			System.out.println("Mensagem");
+		} while (y++ < 1);
+```
