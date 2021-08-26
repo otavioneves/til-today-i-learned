@@ -90,3 +90,110 @@ public class Aula02 {
 
 }
 ```
+Os métodos especiais para pegar ou colocar algo em um objeto, dificultando o acesso direto aos atributos da classe.
+- Getter: um metódo acessor que pega algo dentro do objeto sem acessar diretamente o objeto, garantindo maior segurança aos dados do objeto.
+```
+public class Caneta {
+
+	public String modelo;
+
+	public String getModelo() {
+		return modelo;
+	}
+}
+```
+- Setter: um método modificador que coloca algo dentro do objeto sem acessar diretamento o objeto, garantindo maior segurança dos dados do objeto. Esse método precisa de um argumento para funcionar.
+```
+```
+public class Caneta {
+
+	public String modelo;
+
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
+	}
+}
+```
+- Construct: um método construtor constrói o objeto com atributos, métodos (e podendo receber parâmetros inicias), logo ao criar o objeto, ou seja, todo objeto criado já roda o método construtor. O método construtor tem o mesmo nome da Classe.
+```
+public class Caneta {
+
+	public String modelo;
+	private Double ponta;
+	private Boolean tampada;
+	private String cor;
+	
+	public Caneta(String modelo, Double ponta, Boolean tampada, String cor) {
+		super();
+		this.modelo = modelo;
+		this.ponta = ponta;
+		this.tampada = tampada;
+		this.cor = cor;
+	}	
+}
+```
+- OBJETO COMPLETA UTILIZANDO GETTERS, SETTER e CONSTRUCT:
+public class Caneta {
+
+	public String modelo;
+	private Double ponta;
+	private Boolean tampada;
+	private String cor;
+		
+	public Caneta(String modelo, Double ponta, Boolean tampada, String cor) {
+		super();
+		this.modelo = modelo;
+		this.ponta = ponta;
+		this.tampada = tampada;
+		this.cor = cor;
+	}
+		
+		
+	public String getModelo() {
+		return modelo;
+	}
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
+	}
+
+
+	public Double getPonta() {
+		return this.ponta;
+	}
+	public void setPonta(Double p) {
+		this.ponta = p;
+	}
+	
+	
+	public Boolean getTampada() {
+		return this.tampada;
+	}
+	public void setTampada (Boolean t) {
+		this.tampada = t;
+	}
+	
+	
+	public String getCor() {
+		return this.cor;
+	}
+	public void setCor(String c) {
+		this.cor = c;
+	}
+	
+	
+	public void tampar() {
+		this.tampada = true;
+	}
+	public void destampar() {
+		this.tampada = false;
+	}
+	
+	public void status() {
+		System.out.println("SOBRE A CANETA:");
+		System.out.println("Modelo: " + this.getModelo());
+		System.out.println("Ponta: " + this.getPonta());
+		System.out.println("Cor: " + this.getCor());
+		System.out.println("Tampada: " + this.getTampada());
+	}
+	
+}
