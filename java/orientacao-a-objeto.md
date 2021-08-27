@@ -148,7 +148,7 @@ public class Caneta {
 		this.cor = cor;
 	}
 		
-		
+
 	public String getModelo() {
 		return modelo;
 	}
@@ -197,3 +197,6 @@ public class Caneta {
 	}
 	
 }
+- Encapsulamento: os encapsulamentos é um dos pilares da progamação orientada à objetos. Ele encapsula os dados internos e disponibiliza uma interface para o usuário.
+A interface é um método abstrato que define ações mas não seus atos, ele é previsto mas não implementado, e são sempre implementados na classe do objeto. Os métodos são sempre públicos. <br>
+Ao encapsular, todos os atributos do objeto ficam como privados.<br>
