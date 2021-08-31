@@ -1,1 +1,0 @@
-Os argumentos são informações passadas ao comando. Por exemplo, para copiar os arquivos de um lugar para o outro, precisamos passar argumentos como o arquivo que será copiado, o local de origem e o local de destino.
