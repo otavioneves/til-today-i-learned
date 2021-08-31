@@ -61,6 +61,3 @@ Hoje eu aprendi - Uma coleção de pequenos tópicos que eu aprendo sobre lingua
 - [Métodos](metodos.md)
 - [Modificadores de Acesso](modificadores-de-acesso.md)
 - [Polimorfismo](polimorfismo.md)
-- []()
-- []()
-- []()
