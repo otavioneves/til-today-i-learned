@@ -1,0 +1,2 @@
+Alguns métodos podem ser utilizados no tipo String para podermos manipular, selecionar, visualizar, algum caractere ou cadeia de caracteres de um String. Alguns deles são:
+- nome1.compareTo(nome2) = se o nome1 for antes de nome 2, o resultado é -1. Se forem iguais, retorna 0. Se o nome1 vier depois de nome 2, retorna 1.
