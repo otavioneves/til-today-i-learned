@@ -59,3 +59,24 @@ Outra forma é acessar diretamente variando, nesse caso i e y, e acessando os í
 			    }
 		}
 ```
+<br>
+Outra forma de executar o for em arrays é a seguinte: 
+```
+public class Arrays {
+
+	public static void main(String[] args) {
+		
+		double[] temperaturas = new double[365];
+		temperaturas[0] = 31.3;
+		temperaturas[1] = 32;
+		temperaturas[2] = 33.7;
+		temperaturas[3] = 34;
+		temperaturas[4] = 33.1;
+
+		for (double temp : temperaturas){
+			System.out.println(temp);
+		}
+	}
+
+}
+```

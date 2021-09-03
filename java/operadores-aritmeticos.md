@@ -13,3 +13,5 @@ Integer modulo = 7 % 4; // O módulo é o resto da divisão, nesse caso seria 3.
 Integer precedenciaComVariaveis = cinco * (um + um);
 System.out.println("Precedência com variáveis: " + precedenciaComVariaveis);
 ```
+Outros:
+- Math.sqrt(numero) : calcula a raiz quadrada
