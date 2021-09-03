@@ -14,3 +14,4 @@ Os operadores lógicos são utilizados para tomar decisões.
 ```
 Os operadores lógicos são operadores quer fazem uma relação e retornam sempre um resultado booleano.
 - ! : operador not
+- `variavelbooleana ? açãotrue : ação false` : operador ternário, é se caso e a varíavel for true, executa a primeira ação, caso for ação, executa a segunda ação.
