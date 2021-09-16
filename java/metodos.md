@@ -36,3 +36,4 @@ imprimirTraco();
         return valida;
 	}
 ```
+Sempre que criarmos um método construtor que receba parâmetros, é sempre importante, como boa prática, criar um construtor vazio nessa mesma classe.

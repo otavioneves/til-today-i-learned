@@ -37,11 +37,6 @@ Hoje eu aprendi - Uma coleção de pequenos tópicos que eu aprendo sobre lingua
 - [Constantes](constanes.md)
 - [Estruturas de Decisão](estruturas-de-decisão.md)
 - [Funcionalidades](funcionalidade.md)
-- [Java Date Format](java-text-DateFormat.md)
-- [Java Time](java-time.md)
-- [Java Util Calendar](java-util-calendar.md)
-- [Java Util Date](java-util-date.md)
-- [Java Files](java.nio.file.md)
 - [Laços de Iteração](lacos-de-iteracao.md)
 - [Métodos](metodos.md)
 - [Modificadores de Acesso](modificadores-de-acesso.md)
@@ -61,3 +56,10 @@ Hoje eu aprendi - Uma coleção de pequenos tópicos que eu aprendo sobre lingua
 - [Métodos](metodos.md)
 - [Modificadores de Acesso](modificadores-de-acesso.md)
 - [Polimorfismo](polimorfismo.md)
+
+### Classes de Java
+- [Java Date Format](java-text-DateFormat.md)
+- [Java Time](java-time.md)
+- [Java Util Calendar](java-util-calendar.md)
+- [Java Util Date](java-util-date.md)
+- [Java Files](java.nio.file.md)
