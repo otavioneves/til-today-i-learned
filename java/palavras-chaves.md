@@ -1,0 +1,8 @@
+- Scanner = utilizado para ler uma entrada do usuário pelo System.in. Para finalizar o recurso scanner, precisamos fechá-lo com `scanner.close();`
+- break = realiza o encerramento na execução do código;
+- default = uma execução padrão;
+- super = é uma palavra chave que fez a referência à uma superclasse, por exemplo, ao criar um construtor na classe mãe, podemos utilizar o construtor da classe mãe na classe filha. Sempre que formos fazer acesso à superclasse utilizamos o `super`, semelhante ao `this` que utilizamos para fazer referência à propria classe.
+- abstract = sempre que usarmos um modificador `abstract` significa que essa classe ou métodos não pode ser instanciada, apenas ser herdada de outra, que aí sim pode ser instanciada. No caso dos métodos, sempre que criarmos um método abstrato em superclasse, precisamos instanciá-lo nas subclasses, mesmo que vazio.
+- final = sempre que usarmos um modificador `final` signigica que essa classe, método ou atributo não pode ser herdada ou alterada. É muito utilizado para criarmos classes que não queremos que seja alterada ou herdada. Utilizando o final em um atributo, o atributo deve ser nomeado com todas as letras maíusculas, como por exemplo: QUANTIDADE_DE_DIAS_DA_SEMANA.
+- .equals() = é uma classe utilizada para fazer comparação, sendo muito importante para comparação entre objetos.
+- implements = utilizado para implementar uma ou mais interfaces em uma classe. A interface é uma classe abstrata com métodos abstratos (métodos vazios, sem corpo) utilizada para ser implementada em uma outra classe. Os atributos de uma interface são sempre definidas como `public final`, ou seja, uma constante.
