@@ -80,3 +80,13 @@ public class Arrays {
 
 }
 ```
+FUNCIONALIDADES
+- .length = retorna o tamanho do vetor:
+```
+		int[] vetorA = new int[5];
+		
+		for (int i=0;i<vetorA.length;i++) {
+			System.out.print("Digite o " + (i+1)+"º número: ");
+			
+		}
+```
