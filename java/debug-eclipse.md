@@ -1,0 +1,1 @@
+F6 - Pular uma etapa

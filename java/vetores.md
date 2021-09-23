@@ -30,7 +30,7 @@ Os vetores podem também ser de duas dimensões, podendo guardar valor em X e em
 		Double[][] faturamentoAnual = new Double[][] { faturamentoJaneiro, faturamentoFeveriro };
 ```
 As posições (índices) em um vetor começam com 00, e vão aumentando de 1 em 1 nas linhas e começando com 0 e vão aumentando de 1 em 1 nas colunas.
-O Primeiro colchete é a coluna e o segundo a linha:
+O Primeiro colchete é a linha e o segundo a coluna:
 - //[00][01][02]
 - //[10][11][12]
 - //[20][21][22]
@@ -89,4 +89,31 @@ FUNCIONALIDADES
 			System.out.print("Digite o " + (i+1)+"º número: ");
 			
 		}
+```
+Para ja settar algum dado no momento da criação de um array ou matriz, podemos utilizar as chaves, conforme abaixo:
+```
+double[] notasAluno1= {7,8,9,10};
+```
+```
+double[][] notasAlunos= {{7,8,9,10},{8,6,7,10}};
+```
+- Arrays Irregulares: matriz de vetores de tamanhos diferentes:
+```
+		String[][] nomesFilhos = new String[numEntrevistados][];
+		
+		for (int i=0; i<nomesFilhos.length; i++){
+			
+			System.out.println("Entre com a quantidade de filhos");
+			int qtdFilhos = scan.nextInt();
+			
+			nomesFilhos[i] = new String[qtdFilhos];
+			
+			for (int j=0; j<nomesFilhos[i].length; j++){
+				
+				System.out.println("Digite o nome do filho " + (j+1));
+				
+				nomesFilhos[i][j] = scan.next();
+			}
+		}
+
 ```
