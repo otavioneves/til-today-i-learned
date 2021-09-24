@@ -2,7 +2,7 @@
 Today I Learned - A collection a small topics that I learn about languages, technologies and tools.<br>
 Hoje eu aprendi - Uma coleção de pequenos tópicos que eu aprendo sobre linguagens, tecnologias e ferramentas.
 
-### Categories
+### Categorias
 - [Git](git)
 - [Java Básico](java)
 - [Java e Orientação à Objetos](java)
@@ -31,11 +31,14 @@ Hoje eu aprendi - Uma coleção de pequenos tópicos que eu aprendo sobre lingua
 - [Stash](stash.md)
 - [Tags e Releases](tags-e-realeases.md)
 
-### Java Básico
+### Java
 - [Atalhos da IDE Eclipse](eclipse-atalhos.md)
 - [Concatenação de Textos](concatenacao-de-textos.md)
 - [Constantes](constanes.md)
+- [Debug](debug-eclipse.md)
 - [Estruturas de Decisão](estruturas-de-decisão.md)
+- [Exceptions](execptions.md)
+- [For each](for-each.md)
 - [Laços de Iteração](lacos-de-iteracao.md)
 - [Métodos](metodos.md)
 - [Modificadores de Acesso](modificadores-de-acesso.md)
@@ -44,15 +47,19 @@ Hoje eu aprendi - Uma coleção de pequenos tópicos que eu aprendo sobre lingua
 - [Operadores de Atribuição](operadores-de-atribuicao.md)
 - [Operadores de Incremento e Decremento](operadores-incremento-decremento.md)
 - [Operadores Logicos](operadores-logicos.md)
+- [Operadores Relacionais](operadores-relacionais.md)
 - [Palavras Chaves](palavras-chaves.md)
 - [Recursividade](recursividade.md)
+- [String](string.md)
 - [System](system.md)
 - [Tipos de Variáveis](tipos-de-variaveis.md)
 - [Vetores](vetores.md)
 
 ### Java e Orientação à Objetos
+- [Castring](casting.md)
 - [Encapsulamento](encapsulamento.md)
 - [Herança](heranca.md)
+- [Instance Of](instance-of.md)
 - [Métodos](metodos.md)
 - [Modificadores de Acesso](modificadores-de-acesso.md)
 - [Polimorfismo](polimorfismo.md)
