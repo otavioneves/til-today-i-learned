@@ -1,4 +1,5 @@
 - CTRL+D = apaga a linha inteira;
+- CTRL+I = faz a indentação automática;
 - CTRL+N = abre a janela para criar  classe, projeto, etc;
 - CTRL+3 = abre a janela para criar ou modificar vários itens;
 - Alt+Seta pra cima ou Seta para baixo = sobe ou desce um bloco selecionado;
