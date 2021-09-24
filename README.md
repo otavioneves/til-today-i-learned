@@ -16,7 +16,7 @@ Hoje eu aprendi - Uma coleção de pequenos tópicos que eu aprendo sobre lingua
 - [Clone](git/clonar-repositorio.md)
 - [Comandos básicos](git/comandos-basicos.md)
 - [Commits](git/commit.md)
-- [Configuração de usuário](git/configurar-usuário.md)
+- [Configuração de usuário](git/configurar-usuario.md)
 - [Desfazendo alterações](git/desfazendo-alteracoes.md)
 - [Diff](git/diff.md)
 - [Git Flow](git/git-flow.md)
