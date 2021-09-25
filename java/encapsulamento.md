@@ -104,7 +104,6 @@ public class Caneta {
 ```
 - Setter: um método modificador que coloca algo dentro do objeto sem acessar diretamento o objeto, garantindo maior segurança dos dados do objeto. Esse método precisa de um argumento para funcionar.
 ```
-```
 public class Caneta {
 
 	public String modelo;
@@ -114,7 +113,7 @@ public class Caneta {
 	}
 }
 ```
-- Construct: um método construtor constrói o objeto com atributos, métodos (e podendo receber parâmetros inicias), logo ao criar o objeto, ou seja, todo objeto criado já roda o método construtor. O método construtor tem o mesmo nome da Classe.
+- Construct: um método construtor constrói o objeto com atributos, métodos (e podendo receber parâmetros inicias), logo ao criar o objeto, ou seja, todo objeto criado já roda o método construtor. O método construtor tem o mesmo nome da Classe.	
 ```
 public class Caneta {
 
@@ -133,7 +132,8 @@ public class Caneta {
 }
 ```
 - OBJETO COMPLETA UTILIZANDO GETTERS, SETTER e CONSTRUCT:
-public class Caneta {
+```
+	public class Caneta {
 
 	public String modelo;
 	private Double ponta;
@@ -194,17 +194,17 @@ public class Caneta {
 		System.out.println("Ponta: " + this.getPonta());
 		System.out.println("Cor: " + this.getCor());
 		System.out.println("Tampada: " + this.getTampada());
+	}	
 	}
-	
-}
+```
 - Encapsulamento: os encapsulamentos é um dos pilares da progamação orientada à objetos. Ele encapsula os dados internos e disponibiliza uma interface para o usuário.
 A interface é um método abstrato que define ações mas não seus atos, ele é previsto mas não implementado, e são sempre implementados na classe do objeto. Os métodos são sempre públicos. <br>
 Ao encapsular, todos os atributos do objeto ficam ou como privados, ou como publicos ou protegidos, dependendo da necessidade.<br>
 No exemplo abaixo, nosso programa principal instancia lutadores, através da classe Lutador, e os objetos se relacionam por agregação na classe Luta.
 ```
-package aula07;
-\\ programa principal
-public class Aula07 {
+	package aula07;
+	\\ programa principal
+	public class Aula07 {
 
 	public static void main(String[] args) {
 
@@ -231,9 +231,9 @@ public class Aula07 {
 		UEC01.marcarLuta(l[0], l[1]);
 		UEC01.lutar();
 	}
-
 }
 ```
+
 ```
 package aula07;
 \\ classe do objeto Lutador
@@ -359,6 +359,7 @@ public class Lutador {
 	}
 }
 ```
+
 ```
 package aula07;
 
@@ -465,7 +466,6 @@ public class Luta {
 	}
 }
 ```
-
 - Interface: uma interface é uma classe aonde se cria métodos, porém não se define os mesmos, a fim de serem chamados e definidos suas ações na classe que gerará um objeto.
 ```
 package aula06;
@@ -482,9 +482,9 @@ public interface Controlador {
 	public abstract void desligarMudo();
 	public abstract void play();
 	public abstract void pause();
-	
 }
 ```
+
 ```
 package aula06;
 
@@ -639,7 +639,5 @@ public class Controle implements Controlador{
 			this.setTocando(false);
 		}
 	}
-	
 }
-
 ```

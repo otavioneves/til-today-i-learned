@@ -60,9 +60,11 @@ Outra forma é acessar diretamente variando, nesse caso i e y, e acessando os í
 		}
 ```
 <br>
-Outra forma de executar o for em arrays é a seguinte: 
+Outra forma de executar o for em arrays é a seguinte:
+<br>
+
 ```
-public class Arrays {
+	public class Arrays {
 
 	public static void main(String[] args) {
 		
@@ -77,11 +79,12 @@ public class Arrays {
 			System.out.println(temp);
 		}
 	}
-
-}
+	}
 ```
+<br>
 FUNCIONALIDADES
 - .length = retorna o tamanho do vetor:
+
 ```
 		int[] vetorA = new int[5];
 		
@@ -90,14 +93,19 @@ FUNCIONALIDADES
 			
 		}
 ```
+
 Para ja settar algum dado no momento da criação de um array ou matriz, podemos utilizar as chaves, conforme abaixo:
+
 ```
 double[] notasAluno1= {7,8,9,10};
 ```
+
 ```
 double[][] notasAlunos= {{7,8,9,10},{8,6,7,10}};
 ```
+
 - Arrays Irregulares: matriz de vetores de tamanhos diferentes:
+
 ```
 		String[][] nomesFilhos = new String[numEntrevistados][];
 		

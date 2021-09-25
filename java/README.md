@@ -1,1 +1,1 @@
-Esse repositório contém TILs de Java, com tópicos aprendidos no dia a dia em cursos e em Bootcamps.
+This repository contains Java TILs, with topics learned in everyday courses and Bootcamps.

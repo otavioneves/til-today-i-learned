@@ -25,10 +25,4 @@ public class Exemplo008 {
     }
 }
 ```
-
 - SimpleDateFormat: tem mais flexibilidade no tratamento da data.
-```
-
-
-
-```

@@ -6,6 +6,7 @@ Hoje eu aprendi - Uma coleção de pequenos tópicos que eu aprendo sobre lingua
 - [Git](git)
 - [Java](java)
 - [Java e Orientação à Objetos](java)
+- [Java e Estrutura de Dados](java)
 
 ### Git
 - [Bisect](git/bisect.md)
@@ -70,3 +71,6 @@ Hoje eu aprendi - Uma coleção de pequenos tópicos que eu aprendo sobre lingua
 - [Java Util Calendar](java/java-util-calendar.md)
 - [Java Util Date](java/java-util-date.md)
 - [Java Files](java/java.nio.file.md)
+
+### Java e Estruturas de Dados de Java
+- [Introdução à Estrutura de Dados](introducao-estruturas-de-dados.md)

@@ -32,10 +32,10 @@ O laço for é mais para quando você tem uma quantidade de iterações conhecid
 Dentro do while também tem a vantagem de poder utilizar uma varíavel já presente no código.<br>
 Os comandos break e continue também são muito utilizados nos laços de iteração:
 - break : usado para parar uma laço:
+
 ```
-//break
-        int i = 0;
-		while (i < 10) {
+		int i = 0;
+        while (i < 10) {
 			if (i == 5) {
 				System.out.println("Vai parar!");
 				break;
@@ -44,7 +44,9 @@ Os comandos break e continue também são muito utilizados nos laços de iteraç
 			i++;
 		}
 ```
+
 - continue : usado para continuar o laço:
+```
 		int i = 0;
 		while (i < 10) {
 			if (i == 5) {
@@ -56,8 +58,11 @@ Os comandos break e continue também são muito utilizados nos laços de iteraç
 			System.out.println(i + ": Um texto qualquer.");
 			i++;
 		}
+
 ```
+
 - do while: nessa estrutura a mudança é que fazemos o bloco, para depois verificar novamente a condição. No while, verifica-se a confição inicialmente, para depois executar o laço.
+
 ```
 		do {
 			System.out.println("Mensagem");
@@ -65,6 +70,7 @@ Os comandos break e continue também são muito utilizados nos laços de iteraç
 ```
 
 EXEMPLO COM VALIDAÇÃO DE INFORMAÇÕES DO CURSO DA LOIANE:
+
 ```
 *
  * To change this license header, choose License Headers in Project Properties.
@@ -172,8 +178,7 @@ public class Exer03 {
         System.out.println("Idade: " + idade);
         System.out.println("Salário: " + salario);
         System.out.println("Sexo: " + sexo);
-        System.out.println("Estado Civil: " + estadoCivil);
-        
+        System.out.println("Estado Civil: " + estadoCivil);    
+        }
     }
-}
 ```

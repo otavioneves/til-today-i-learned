@@ -1,1 +1,0 @@
-Em Java, quando atribuímos um tipo primitivo à outro, existe sempre cópia do valor em memória. Quando se trata de objetos, copiamos o valor da referência em memória, sem duplicar o objeto, ou seja, a atribuição ou referência é de memória, e não do valor da memória.

@@ -1,1 +1,1 @@
-Esse repositório contém TILs de Git, com tópicos aprendidos no dia a dia em cursos.
+This repository contains Git TILs, with topics learned in everyday courses and Bootcamps.
