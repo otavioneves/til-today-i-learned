@@ -33,13 +33,18 @@ Hoje eu aprendi - Uma coleção de pequenos tópicos que eu aprendo sobre lingua
 - [Tags e Releases](git/tags-e-realeases.md)
 
 ### Java
+- [Anotations](java/anotacoes.md)
 - [Atalhos da IDE Eclipse](java/eclipse-atalhos.md)
+- [Classes Aninhadas](java/classes-aninhadas.md)
 - [Concatenação de Textos](java/concatenacao-de-textos.md)
 - [Constantes](java/constantes.md)
 - [Debug](java/debug-eclipse.md)
+- [Enums](java/enums.md)
 - [Estruturas de Decisão](java/estruturas-de-decisao.md)
 - [Exceptions](java/exceptions.md)
 - [For each](java/for-each.md)
+- [Garbage Collector](java/garbagge-collector.md)
+- [InstanceOf](java/instance-of.md)
 - [Laços de Iteração](java/lacos-de-iteracao.md)
 - [Métodos](java/metodos.md)
 - [Modificadores de Acesso](java/modificadores-de-acesso.md)
@@ -50,11 +55,15 @@ Hoje eu aprendi - Uma coleção de pequenos tópicos que eu aprendo sobre lingua
 - [Operadores Logicos](java/operadores-logicos.md)
 - [Operadores Relacionais](java/operadores-relacionais.md)
 - [Palavras Chaves](java/palavras-chaves.md)
+- [Printf](java/printf.md)
 - [Recursividade](java/recursividade.md)
-- [String](java/string.md)
+- [Static Import](static-import.md)
 - [System](java/system.md)
+- [Threads](java/threads.md)
 - [Tipos de Variáveis](java/tipos-de-variaveis.md)
+- [Varargs](java/varargs.md)
 - [Vetores](java/vetores.md)
+- [Wrappers](java/wrappers.md)
 
 ### Java e Orientação à Objetos
 - [Casting](java/casting.md)
@@ -71,6 +80,7 @@ Hoje eu aprendi - Uma coleção de pequenos tópicos que eu aprendo sobre lingua
 - [Java Util Calendar](java/java-util-calendar.md)
 - [Java Util Date](java/java-util-date.md)
 - [Java Files](java/java.nio.file.md)
+- [String](java/string.md)
 
 ### Java e Estruturas de Dados de Java
-- [Introdução à Estrutura de Dados](introducao-estruturas-de-dados.md)
+- [Introdução à Estrutura de Dados](java/introducao-estruturas-de-dados.md)
