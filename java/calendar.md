@@ -15,7 +15,7 @@ O java.util.calendar é uma classe que provê metodos para converter data entre 
 ```
 Podemos manipular datas da seguinte forma:
 ```
-        Calendar agora = Calendar.getInstance();
+        Calendar hoje = Calendar.getInstance();
 
         System.out.println("A data corrente é : " + agora.getTime());   // A data corrente é : Sun Jul 14 20:50:31 BRT 2019
 
@@ -27,4 +27,10 @@ Podemos manipular datas da seguinte forma:
 
         agora.add(Calendar.YEAR, 2);
         System.out.println("2 anos depois: " + agora.getTime());        // 2 anos depois: Fri Oct 29 20:50:31 BRT 2021
+```
+Para verificarmos se um ano é bissexto, podemos utilizar o método da Classe Gregorian Callendar, que possui todos os métodos da Classe Calendar, porém pode ser instanciada e possui um método para verificar se o ano é bissexto.
+```
+		GregorianCalendar hoje = new GregorianCalendar();
+		
+		System.out.println(hoje.isLeapYear(2020));
 ```

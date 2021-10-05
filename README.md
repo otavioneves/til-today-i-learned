@@ -75,12 +75,12 @@ Hoje eu aprendi - Uma coleção de pequenos tópicos que eu aprendo sobre lingua
 - [Polimorfismo](java/polimorfismo.md)
 
 ### Bibliotecas de Java
-- [Java Date Format](java/java-text-DateFormat.md)
-- [Java Time](java/java-time.md)
-- [Java Util Calendar](java/java-util-calendar.md)
-- [Java Util Date](java/java-util-date.md)
+- [Calendar](java/calendar.md)
+- [Date](java/date.md)
 - [Java Files](java/java.nio.file.md)
+- [SimpleDateFormat](java/dateformat.md)
 - [String](java/string.md)
+- [Time](java/java-time.md)
 
 ### Java e Estruturas de Dados de Java
 - [Introdução à Estrutura de Dados](java/introducao-estruturas-de-dados.md)
