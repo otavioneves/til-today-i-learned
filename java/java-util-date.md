@@ -1,4 +1,7 @@
-O pacote java.util.Date é utilizado para utilizar datas no código.
+O pacote java.util.Date é utilizado para trabalhar com datas no código. Atualmente trabalhar com a classe date não é melhor forma de se trabalhar com datas, porém, em alguns casos ainda é muito usado, como linhas de dados em bancos de dados.
+- getTime() - retorna os milisegundos desde 1 de Janeiro de 1970
+- getDate() - retorna o dia do mês (DEPRECATED)
+
 ### Construtores
 - Date(): retorna informações de data padrão;
 ```
