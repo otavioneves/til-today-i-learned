@@ -38,6 +38,7 @@ Hoje eu aprendi - Uma coleção de pequenos tópicos que eu aprendo sobre lingua
 - [Classes Aninhadas](java/classes-aninhadas.md)
 - [Concatenação de Textos](java/concatenacao-de-textos.md)
 - [Constantes](java/constantes.md)
+- [Construtores](java/construtores.md)
 - [Debug](java/debug-eclipse.md)
 - [Enums](java/enums.md)
 - [Estruturas de Decisão](java/estruturas-de-decisao.md)
@@ -57,7 +58,8 @@ Hoje eu aprendi - Uma coleção de pequenos tópicos que eu aprendo sobre lingua
 - [Palavras Chaves](java/palavras-chaves.md)
 - [Printf](java/printf.md)
 - [Recursividade](java/recursividade.md)
-- [Static Import](static-import.md)
+- [Static Import](java/static-import.md)
+- [Static](java/static.md)
 - [System](java/system.md)
 - [Threads](java/threads.md)
 - [Tipos de Variáveis](java/tipos-de-variaveis.md)
@@ -77,10 +79,12 @@ Hoje eu aprendi - Uma coleção de pequenos tópicos que eu aprendo sobre lingua
 ### Bibliotecas de Java
 - [Calendar](java/calendar.md)
 - [Date](java/date.md)
-- [Java Files](java/java.nio.file.md)
+- [Files](java/files.md)
+- [Locale](java/locale.md)
+- [Math](java/math.md)
 - [SimpleDateFormat](java/dateformat.md)
 - [String](java/string.md)
-- [Time](java/java-time.md)
+- [Time](java/time.md)
 
 ### Java e Estruturas de Dados de Java
 - [Introdução à Estrutura de Dados](java/introducao-estruturas-de-dados.md)
