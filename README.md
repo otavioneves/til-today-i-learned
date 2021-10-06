@@ -75,13 +75,18 @@ Hoje eu aprendi - Uma coleção de pequenos tópicos que eu aprendo sobre lingua
 - [Métodos](java/metodos.md)
 - [Modificadores de Acesso](java/modificadores-de-acesso.md)
 - [Polimorfismo](java/polimorfismo.md)
+- [TimeZone](timezone.md)
 
 ### Bibliotecas de Java
+- [API de Datas](java/api-de-datas.md)
+- [BigInteger e BigDecimal](java/bigdecimal-biginteger.md)
 - [Calendar](java/calendar.md)
 - [Date](java/date.md)
 - [Files](java/files.md)
 - [Locale](java/locale.md)
 - [Math](java/math.md)
+- [NumberFormat](java/numberformat.md)
+- [ResourceBundle](java/resource-bundle.md)
 - [SimpleDateFormat](java/dateformat.md)
 - [String](java/string.md)
 - [Time](java/time.md)
