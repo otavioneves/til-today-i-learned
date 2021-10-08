@@ -30,3 +30,30 @@ public class Carro{
     } 
 }
 ```
+Para chamarmos o construtor de uma superclasse utilizamos a palavra chave super(), que quando usada em um construtor de uma subclasse, invoca o construtor padrão da superclasse. Podemos também chamar outros construtores da superclasse, utilizando os atributos solicitados pelo mesmo passando-os no construtor da subclasse.
+```
+    public Conta(){                 // construtor padrão
+    }
+
+    public Conta(int agencia, int numero){                  // construtor com atributos
+        Conta.total++;
+        System.out.println("O total de contas é " + Conta.total);
+        this.agencia = agencia;
+        this.numero = numero;
+        this.saldo = 100;
+        System.out.println("Estou criando uma conta " + this.numero);
+    }
+```
+```
+public class ContaCorrente extends Conta {
+
+        public ContaCorrente(int agencia, int numero) {         // construtor da subclasse chamando um construtor com agencia e numero da superclasse
+            super(agencia, numero);
+        }
+
+        public ContaCorrente() {         // construtor padrão da subclasse chamando um construtor padrão da superclasse
+            super();
+        }
+
+}
+```
