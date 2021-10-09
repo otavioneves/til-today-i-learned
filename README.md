@@ -4,9 +4,10 @@ Hoje eu aprendi - Uma coleção de pequenos tópicos que eu aprendo sobre lingua
 
 ### Categorias
 - [Git](git)
+- [Classes do Java](java)
+- [Estrutura de Dados em Java](java)
 - [Java](java)
 - [Java e Orientação à Objetos](java)
-- [Java e Estrutura de Dados](java)
 
 ### Git
 - [Bisect](git/bisect.md)
@@ -77,7 +78,7 @@ Hoje eu aprendi - Uma coleção de pequenos tópicos que eu aprendo sobre lingua
 - [Polimorfismo](java/polimorfismo.md)
 - [TimeZone](timezone.md)
 
-### Bibliotecas de Java
+### Classes do Java
 - [API de Datas](java/api-de-datas.md)
 - [BigInteger e BigDecimal](java/bigdecimal-biginteger.md)
 - [Calendar](java/calendar.md)
@@ -91,5 +92,7 @@ Hoje eu aprendi - Uma coleção de pequenos tópicos que eu aprendo sobre lingua
 - [String](java/string.md)
 - [Time](java/time.md)
 
-### Java e Estruturas de Dados de Java
+### Estruturas de Dados em Java
+- [Array](java/array.md)
+- [ArrayList](java/arraylist.md)
 - [Introdução à Estrutura de Dados](java/introducao-estruturas-de-dados.md)
