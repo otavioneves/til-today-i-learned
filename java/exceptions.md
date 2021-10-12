@@ -164,3 +164,4 @@ public class DivisaoNaoExata extends Exception {
 		}
 	}
 ```
+Existem duas formas de tratas exceptions que são checked, ou seja, que não herdam um tipo é unchecked, ou seja, não verificada pelo compilador. Podemos colocar na assinatura do método, ou tratar com o try catch.
