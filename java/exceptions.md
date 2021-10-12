@@ -143,9 +143,8 @@ public class DivisaoNaoExata extends Exception {
 	}
 }
 ```
-<br>
 ```
-    public static void main(String[] args) {
+public static void main(String[] args) {
 		int[] numeros = {4, 8, 5, 16, 32, 21, 64, 128};
 		int[] demon = {2, 0, 4, 8, 0, 2, 4};
 
@@ -163,5 +162,46 @@ public class DivisaoNaoExata extends Exception {
 			}
 		}
 	}
+
 ```
-Existem duas formas de tratas exceptions que são checked, ou seja, que não herdam um tipo é unchecked, ou seja, não verificada pelo compilador. Podemos colocar na assinatura do método, ou tratar com o try catch.
+Existem duas formas de tratar exceptions que são checked, ou seja, que não herdam um tipo é unchecked(não verificadas pelo compilador, herdam da classe RuntimeException). <br>
+Para tratar as excepetion checked podemos colocar na assinatura do método, ou tratar com o try catch.<br>
+Quem faz o tratamento try catch geralmente é quem usa o método, geralmente não é as classes que são objetos.<br>
+Um try sempre precisa de um catch (um ou mais) ou um finally (apenas um).
+- Para simplificarmos códigos de tratamentos de exceptions utilizando try, catch, finally, podemos fazer da seguinte maneira, colocando um parâmetro no momento de chamar o try. Com esse modo, quando o try é executado, por o argumento de dentro já implementar a classe AutoCloseable, um método close já vem junto não sendo necessário chamar o finally no final do bloco.
+```
+public class Conexao implements AutoCloseable{ //O AutoCloseable exige que tenhamos o método close(), mas podemos deixar o método menos perigoso, retirando o throws Exception. Assim, simplificaremos um pouco o código e não será necessário mais um tratamento de erro para quem faz a chamada.
+    public Conexao() {
+        System.out.println("Abrindo conexao");
+        throw new IllegalStateException();
+    }
+
+    public void leDados() {
+        System.out.println("Recebendo dados");
+        throw new IllegalStateException();
+    }
+
+    @Override
+    public void close() {
+        System.out.println("Fechando conexao");
+    }
+}
+```
+```
+public static void main(String[] args) {
+
+    try (Conexao conexao = new Conexao()) {
+        conexao.leDados();
+    } catch(IllegalStateException ex) {
+        System.out.println("Deu erro na conexao");
+    }
+}
+```
+```
+//SAÍDA
+
+Abrindo conexao
+Recebendo dados
+Fechando conexao
+Deu erro na conexao
+```
