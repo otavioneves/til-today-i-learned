@@ -28,6 +28,19 @@ for (int i = 1; i<5;soma+=i++);
 		}
 ```
 <br>
+O for melhorado é uma implementação do Java que facilita as iterações. A sintaxe é: para cada elemento de tal tipo (declaramos essa varíavel que pegará essa informação e jogará para dentro do laço) dentro desse array (seguido então do array).
+```
+// modo sem otimização
+for(int i = 0; i < lista.size(); i++) {
+    Object oRef = lista.get(i);
+    System.out.println(oRef);
+}
+
+// modo otimizado: for (TipodaVariavelQueSeráBuscada VaríavelTemporáriaQueReceberáOsDados = array)
+for(Object o : lista) {
+    System.out.println(o);
+}
+```
 O laço for é mais para quando você tem uma quantidade de iterações conhecidas, mesmo que for através de uma varíavel. Já o while é mais utilizada para ser utilizado devido à uma condição.<br>
 Dentro do while também tem a vantagem de poder utilizar uma varíavel já presente no código.<br>
 Os comandos break e continue também são muito utilizados nos laços de iteração:

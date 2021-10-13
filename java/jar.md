@@ -1,0 +1,5 @@
+O arquivo .jar é semelhante a um arquivo zip, que usamos para exportar os arquivos compilados e caso queira as documentações.<br>
+Para gerar o .jar, clicamos com o botão direita no projeto no Package Explorer, selecionamos o que queremos exportar e finalizamos.<br>
+Para utilizarmos um .jar em um outro projeto, colamos esse .jar na pasta chamada libs. Após isso, clicamos com o botão direito nesse .jar no Package Explorer, vamos em Build Path e clicamos em Add Build Path.<br>
+Depois disso, para utilizar no código, temos que importar as classes.<br>
+Podemos também exportar um .jar executável. Para esse modo, exportamos os itens conforme anteriormente, porém em uma das janelas definimos qual é o método main. Para abri-lo, vamos no terminal e rodamos o comando `java -jar` seguido do nome do arquivo .jar.

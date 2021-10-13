@@ -308,3 +308,26 @@ A classe String Tokenizer extrai informações de uma string e gera tokens.
 			System.out.println(st.nextToken());         // o método nextToken extraí o token
 		}
 ```
+A classe StringBuilder que ajuda na concatenação de Strings de forma mais eficiente.
+```
+StringBuilder builder = new StringBuilder("Socorram");
+builder.append("-");
+builder.append("me");
+builder.append(", ");
+builder.append("subi ");
+builder.append("no ");
+builder.append("ônibus ");
+builder.append("em ");
+builder.append("Marrocos");
+String texto = builder.toString();
+System.out.println(texto);
+```
+Como a classe String e a classe StringBuilder implementam uma mesma interface, CharSequence, isso faz que alguns métodos da classe String saibam trabalhar com o StringBuilder.
+```
+String nome = "ALURA";
+CharSequence cs = new StringBuilder("al");
+
+nome = nome.replace("AL", cs);
+
+System.out.println(nome);
+```
