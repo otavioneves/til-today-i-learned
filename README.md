@@ -96,6 +96,7 @@ Hoje eu aprendi - Uma coleção de pequenos tópicos que eu aprendo sobre lingua
 - [String](java/string.md)
 - [Time](java/time.md)
 - [TimeZone](java/timezone.md)
+- [Vector](java/vector.md)
 
 ### Estruturas de Dados em Java
 - [Array](java/arrays.md)
