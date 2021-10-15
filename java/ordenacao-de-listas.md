@@ -1,4 +1,4 @@
-Podemos fazer ordenação de listas através do método `.sort`. Com o sort, podemos usar a classe Comparator para ordenar segundo algum critério. O método `compare` dessa classe geralmente é aplicado em uma classe separada do código principal, com a regra de ordenação. O código pode ser o seguinte: No caso, estamos querendo ordenar uma lista de Contas.
+Existe uma classe que é do pacote java.util chamada Collections, que contém muitos métodos auxiliares para trabalhar com coleções. Podemos fazer ordenação de listas através de um desses métodos, que é o `.sort`. Com o sort, podemos usar a classe Comparator para ordenar segundo algum critério. O método `compare` dessa classe geralmente é aplicado em uma classe separada do código principal, com a regra de ordenação. O código pode ser o seguinte: No caso, estamos querendo ordenar uma lista de Contas.
 ```
 class NumeroDaContaComparator implements Comparator<Conta> {
 

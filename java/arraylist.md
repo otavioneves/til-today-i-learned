@@ -62,3 +62,26 @@ numeros.add(idade);     // inválido, pois idade é um int, tipo primitivo
 
 numeros.add(29);        // válido, estamos adicionando um 29, que seria um int, tipo primitivo, Autoboxing
 ```
+Para fazer um for dentro de uma collection, no caso, um ArrayList, podemos utilizar o método `forEach`, que recebe uma action, que é um Consumer. Podemos colocar como argumento uma expressão lambda.
+```
+String aula1 = "Modelando a classe Aula";
+String aula2 = "Conhecendo mais de listas";
+String aula3 = "Trabalhando com Cursos e Sets";
+
+ArrayList<String> aulas = new ArrayList<>();
+aulas.add(aula1);
+aulas.add(aula2);
+aulas.add(aula3);
+
+aulas.forEach(aula -> {
+    System.out.println("Percorrendo:");
+    System.out.println("Aula " + aula);
+});   
+```
+E o mistério da LinkedList? E se tivéssemos usado ArrayList na declaração do atributo aulas da classe Curso? O resultado seria exatamente o mesmo!
+
+Então qual é a diferença? Basicamente performance. O ArrayList, como diz o nome, internamente usa um array para guardar os elementos. Ele consegue fazer operações de maneira muito eficiente, como invocar o método get(indice). Se você precisa pegar o décimo quinto elemento, ele te devolverá isso bem rápido. Quando um ArrayList é lento? Quando você for, por exemplo, inserir um novo elemento na primeira posição. Pois a implementação vai precisar mover todos os elementos que estão no começo da lista para a próxima posição. Se há muitos elementos, isso vai demorar... Em computação, chamamos isso de consumo de tempo linear.
+
+Já o LinkedList possui uma grande vantagem aqui. Ele utiliza a estrutura de dados chamada lista ligada, e é bastante rápido para adicionar e remover elementos na cabeça da lista, isto é, na primeira posição. Mas é lento se você precisar acessar um determinado elemento, pois a implementação precisará percorrer todos os elementos até chegar ao décimo quinto, por exemplo.
+
+Confuso? Não tem problema. Sabe o que é interessante? Você não precisa tomar essa decisão desde já e oficializar para sempre. Como utilizamos a referência a List, comprometendo-nos pouco, podemos sempre mudar a implementação, isso é, em quem damos new, caso percebamos que é melhor uma ou outra lista nesse caso em particular.
