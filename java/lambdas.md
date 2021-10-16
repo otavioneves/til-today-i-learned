@@ -30,3 +30,4 @@ lista.forEach( (Conta conta) -> System.out.println(conta + ", " + conta.getTitul
 
 // Leitura: para essa lista, faça um forEach para cada elemento que for uma Conta, imprimindo esses elementos
 ```
+Os lambdas e classes anônimas são muito utilizadas quando não vamos utilizar essa classe em muitos outros lugares no código e quando esse classe terá no máximo 1 ou 2 métodos.
