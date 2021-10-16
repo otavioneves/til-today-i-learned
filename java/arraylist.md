@@ -78,10 +78,32 @@ aulas.forEach(aula -> {
     System.out.println("Aula " + aula);
 });   
 ```
-E o mistério da LinkedList? E se tivéssemos usado ArrayList na declaração do atributo aulas da classe Curso? O resultado seria exatamente o mesmo!
 
-Então qual é a diferença? Basicamente performance. O ArrayList, como diz o nome, internamente usa um array para guardar os elementos. Ele consegue fazer operações de maneira muito eficiente, como invocar o método get(indice). Se você precisa pegar o décimo quinto elemento, ele te devolverá isso bem rápido. Quando um ArrayList é lento? Quando você for, por exemplo, inserir um novo elemento na primeira posição. Pois a implementação vai precisar mover todos os elementos que estão no começo da lista para a próxima posição. Se há muitos elementos, isso vai demorar... Em computação, chamamos isso de consumo de tempo linear.
-
-Já o LinkedList possui uma grande vantagem aqui. Ele utiliza a estrutura de dados chamada lista ligada, e é bastante rápido para adicionar e remover elementos na cabeça da lista, isto é, na primeira posição. Mas é lento se você precisar acessar um determinado elemento, pois a implementação precisará percorrer todos os elementos até chegar ao décimo quinto, por exemplo.
-
-Confuso? Não tem problema. Sabe o que é interessante? Você não precisa tomar essa decisão desde já e oficializar para sempre. Como utilizamos a referência a List, comprometendo-nos pouco, podemos sempre mudar a implementação, isso é, em quem damos new, caso percebamos que é melhor uma ou outra lista nesse caso em particular.
+A diferença de ArrayList com LinkedList é basicamente performance. O ArrayList, como diz o nome, internamente usa um array para guardar os elementos. Ele consegue fazer operações de maneira muito eficiente, como invocar o método get(indice). Se você precisa pegar o décimo quinto elemento, ele te devolverá isso bem rápido. Quando um ArrayList é lento? Quando você for, por exemplo, inserir um novo elemento na primeira posição. Pois a implementação vai precisar mover todos os elementos que estão no começo da lista para a próxima posição. Se há muitos elementos, isso vai demorar... Em computação, chamamos isso de consumo de tempo linear.<br>
+Já o LinkedList possui uma grande vantagem aqui. Ele utiliza a estrutura de dados chamada lista ligada, e é bastante rápido para adicionar e remover elementos na cabeça da lista, isto é, na primeira posição. Mas é lento se você precisar acessar um determinado elemento, pois a implementação precisará percorrer todos os elementos até chegar ao décimo quinto, por exemplo.<br>
+O ideal é utilizar a implementação mais genérica, para isso, utilizamos a referência a List, comprometendo-nos pouco, podemos sempre mudar a implementação, isso é, em quem damos new, caso percebamos que é melhor uma ou outra lista nesse caso em particular.<br><br><br>
+Um método interessante quando não queremos que alguma lista seja modificada diretamente por um método, colocamos o `.unmodifiableLista(List<>)`, que recebe uma lista, dentro do método e retorna o objeto mas de uma maneira voltada para leitura, não para modificar.
+```
+public List<Aula> getAulas(){
+	return Collections.unmodifiableList(aulas);
+}
+```
+Para poder mexer nesse atributo, temos que fazer uma espécie de uma cópia deixando uma lista imutável e um lista que pode ser mudada.
+```
+List<Aula> aulasImutaveis = javaColecoes.getAulas();
+		
+List<Aula> aulas = new ArrayList<>(aulasImutaveis);			// list que pode ser mudada
+```
+Além do método sort(), a classe Collections também possui muitos outros métodos interessantes:
+- Collections.reverse(): O método reverse() serve para inverter a ordem de uma lista. As vezes precisamos imprimir uma lista de nomes do último para o primeiro, ou uma lista de ids do maior para o menor e é nestas horas que utilizamos o reverse para inverter a ordem natural da lista para nós.
+- Collections.shuffle(): O método shuffle() serve para embaralhar a ordem de uma lista. Por exemplo em um caso de um sistema de sorteio, em que precisamos de uma ordem aleatória na nossa lista, utilizamos o método shuffle para embaralhá-la.
+- Collections.singletonList(): O método singletonList() nos devolve uma lista imutável que contêm um único elemento especificado. Ele é útil quando precisamos passar um único elemento para uma API que só aceita uma Collections daquele elemento.
+- Collections.nCopies(): O método nCopies() nos retorna uma lista imutável com a quantidade escolhida de um determinado elemento. Se temos uma lista específica e precisamos obter uma outra lista imutável , contendo diversas cópias de um destes objetos, utilizamos o método nCopies(). O bom deste método é que mesmo que nós solicitemos uma lista com um número grande, como 10000 objetos, ele na verdade se referencia a apenas um, ocupando assim um pequeno espaço. Este método também é utilizado para inicializar Listas recém criadas com Null, já que ele pode rapidamente criar diversos objetos, deste modo:
+```
+List<Type> list = new ArrayList<Type>(Collections.nCopies(1000, (Type)null));
+```
+Escolhemos um Set quando não queremos uma lista ordenada e não queremos itens repetidos.<br>
+Escolhemos um List quando queremos uma lista ordenado e queremos itens repetidos.<br>
+Provavelmente, caso a modelagem do sistema ainda não esteja bem definida, o desenvolvedor irá utilizar a interface Collection. Dessa maneira, terá acesso aos métodos básicos de todas as implementações, como size(), add(), remove() e contains(). Conforme for sentindo necessidade em algo específico, o desenvolvedor fará poucas mudanças em seu código.<br>
+Caso sinta necessidade de fazer uma requisição a um elemento específico através da sua posição, trocará de Collection para List. Caso perceba que ordem não importa, porém é necessária uma busca bem rápida (e sem repetições), um Set é mais apropriado.<br>
+Enquanto não sentir essa necessidade, provavelmente a Collection será a melhor escolha.
