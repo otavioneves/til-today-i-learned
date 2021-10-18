@@ -3,11 +3,13 @@ Today I Learned - A collection a small topics that I learn about languages, tech
 Hoje eu aprendi - Uma coleção de pequenos tópicos que eu aprendo sobre linguagens, tecnologias e ferramentas.
 
 ### Categorias
-- [Git](git)
-- [Classes do Java](java)
-- [Estrutura de Dados em Java](java)
-- [Java](java)
-- [Java e Orientação à Objetos](java)
+- Git
+- Java
+- Java e Orientação à Objetos
+- Classes do Java
+- Estrutura de Dados em Java
+- Testes
+- MySQL
 
 ### Git
 - [Bisect](git/bisect.md)
@@ -51,7 +53,10 @@ Hoje eu aprendi - Uma coleção de pequenos tópicos que eu aprendo sobre lingua
 - [Laços de Iteração](java/lacos-de-iteracao.md)
 - [Lambdas](java/lamdas.md)
 - [Jar](java/jar.md)
-= [Javadoc](java/javadoc.md)
+- [Java 8](java/java8.md)
+- [Java 9+](java/java9+)
+- [Javadoc](java/javadoc.md)
+- [Lambdas](java/lambdas.md)
 - [Métodos](java/metodos.md)
 - [Modificadores de Acesso](java/modificadores-de-acesso.md)
 - [Nomes para variáveis](java/nomes-para-variaveis.md)
@@ -91,7 +96,7 @@ Hoje eu aprendi - Uma coleção de pequenos tópicos que eu aprendo sobre lingua
 - [Date](java/date.md)
 - [DecimalFormat](java/decimalformat.md)
 - [Files](java/files.md)
-- [Java.io Leitra](java/java-io-leitura.md)
+- [Java.io](java/java-io.md)
 - [Locale](java/locale.md)
 - [Math](java/math.md)
 - [NumberFormat](java/numberformat.md)
@@ -105,5 +110,15 @@ Hoje eu aprendi - Uma coleção de pequenos tópicos que eu aprendo sobre lingua
 ### Estruturas de Dados em Java
 - [Array](java/arrays.md)
 - [ArrayList](java/arraylist.md)
-- [LinkedList](java/linkedlist.md)
+- [Encoding](java/encoding.md)
 - [Introdução à Estrutura de Dados](java/introducao-estruturas-de-dados.md)
+- [LinkedList](java/linkedlist.md)
+- [Maps](java/java.md)
+- [Ordenação de Listas](java/ordenacao-de-listas.md)
+
+### Testes
+- [JUnit](testes/junit.md)
+- [TDD](testes/TDD.md)
+- [Testes Automatizados](testes/testes-automatizados.md)
+
+### MySQL
