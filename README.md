@@ -122,3 +122,7 @@ Hoje eu aprendi - Uma coleção de pequenos tópicos que eu aprendo sobre lingua
 - [Testes Automatizados](testes/testes-automatizados.md)
 
 ### MySQL
+- [Introdução](mysql/introducao.md)
+- [MySQL Workbench](mysql/workbench.md)
+- [Tabela](mysql/tabela.md)
+- [Tipos](mysql/tipos.md)
