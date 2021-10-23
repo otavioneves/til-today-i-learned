@@ -93,3 +93,48 @@ CASE
 END
 ORDER BY EMBALAGEM;
 ```
+
+
+- UNION: para juntar duas consultas usamos o UNION. PAra juntar precisamos de mesmo nomes de colunas e mesmos tipos de colunas. Quando fizemos UNION é aplicado o DISTINCT automaticamente. Se usarmos o UNION ALL, o DISTINCT não é aplicado.
+```
+SELECT DISTINCT BAIRRO FROM tabela_de_clientes
+UNION
+SELECT DISTINCT BAIRRO FROM tabela_de_vendedores;
+```
+```
+SELECT DISTINCT BAIRRO FROM tabela_de_clientes
+UNION ALL
+SELECT DISTINCT BAIRRO FROM tabela_de_vendedores;
+```
+
+
+- SUB-CONSULTAS: podemos usar uma subconsulta dentro de uma consulta: consultar todo mundo daqui, que tenha algum dado da tabela de lá.
+```
+SELECT * FROM tabela_de_clientes WHERE BAIRRO IN (
+	SELECT DISTINCT BAIRRO FROM tabela_de_vendedores
+);
+
+// selecionar os bairro de clientes que estão na na seleção distina de bairros de vendedores
+```
+```
+SELECT TABELA.EMBALAGEM, TABELA.PRECO_MAXIMO
+FROM (
+	SELECT EMBALAGEM, MAX(PRECO_DE_LISTA) AS PRECO_MAXIMO FROM tabela_de_produtos GROUP BY EMBALAGEM
+)
+TABELA WHERE TABELA.PRECO_MAXIMO>=10;
+
+// selecionar as embalagens cujo preço máximo é maior ou igual a 10
+```
+
+- VIEW: a visão é uma tabela lógica, onde salvamos essa consulta como se fosse uma tabela. Por trás dos panos, o banco de dados ele vai sempre chamar o SELECT que originou a VIEW, por isso, se o SELECT for muito complexo, teremos algo um pouco pesado. O funcionamento geral é como se fosse uma subconsulta. Para criar um View, clicamos em Views e em Create New View. O nome da view sempre começa com VW.
+```
+CREATE VIEW `VW_MAIORES_EMBALAGENS` AS
+SELECT EMBALAGEM, MAX(PRECO_DE_LISTA) AS MAIOR_PRECO FROM tabela_de_produtos GROUP BY EMBALAGEM ;
+```
+Após a VIEW ser criada, podemos usá-la para consultas como uma tabela.
+```
+SELECT * FROM VW_MAIORES_EMBALAGENS
+```
+```
+SELECT X.EMBALAGEM, X.MAIOR_PRECO FROM VW_MAIORES_EMBALAGENS X WHERE X.MAIOR_PRECO>=10;
+```
