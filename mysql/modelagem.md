@@ -110,3 +110,15 @@ DELETE FROM nome da tabela WHERE condicao;
 
 DELETE FROM produtos WHERE TAMANHO = '1 Litro';
 ```
+
+### Padrões para os Campos
+Ao criarmos uma tabela podemos definir alguns campos com valores padrões, caso não sejam colocados no INSERT. No caso abaixo, sempre que não definirmos a CIDADE, ela virá como Rio de Janeiro, e a DATA_CRIACAO virá com a data corrente do sistema.
+```
+CREATE TABLE tab_padrao(
+ID INT AUTO_INCREMENT,
+DESCRITOR VARCHAR(20),
+ENDERECO VARCHAR(100) NULL,
+CIDADE VARCHAR(50) DEFAULT 'Rio de Janeiro',
+DATA_CRIACAO TIMESTAMP DEFAULT CURRENT_TIMESTAMP(),
+PRIMARY KEY(ID));
+```

@@ -11,4 +11,5 @@ INSERT INTO TAB_IDENTITY (DESCRITOR) VALUES ('CLIENTE3');
 
 SELECT * FROM tab_identity;
 ```
-Caso algum registro venha a ser excluído, o ID vai com ele, e o próximo registro à ser inserido terá um ID que continuará a sequência.
+Caso algum registro venha a ser excluído, o ID vai com ele, e o próximo registro à ser inserido terá um ID que continuará a sequência.<br>
+Podemos também forçar o ID, mas a partir do momento que forçamos esse novo ID, a sequência continuará do número colocado.
