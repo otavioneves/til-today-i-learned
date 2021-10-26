@@ -1,0 +1,3 @@
+Uma transação é utilizada dentro do MySQL para gravarmos uma quantidade de comandos, alterações, inclusões, exclusões, etc, e só depois de finalizarmos a transação é que os comandos serão executados. Para iniciar uma transação utilizamos o comando `START TRANSACTION` finalizar a transação podemos finalizar com o `COMMIT` ou o `ROLLBACK`.
+- COMMIT: com o COMMIT, confirmamos todas as operações entre o START TRANSACTION e o comando COMMIT.
+- ROLLBACK: tudo qeu foi feito entre o START TRANSACTION e o ROLLBACK será desprezado e os dados voltarão ao status de quando o START TRANSACTION foi executado.
