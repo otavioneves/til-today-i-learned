@@ -1,0 +1,1 @@
+Um dos principais fatores que influenciam a performance é o tempo de consulta.
