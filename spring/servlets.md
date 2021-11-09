@@ -76,4 +76,123 @@ Para não escrevermos HTML no código java, utilizamos o JSP, que é uma página
 </body>
 </html>
 ```
-No lado do Servlet, precisamos chamar o JSP que possuí o código HTML.
+No lado do Servlet, precisamos chamar o JSP que possuí o código HTML. Para isso, usamos o método `getRequestDispatcher`, do lado do request, que recebe o nome do endereço do jsp. Chamamos o jsp pelo dispachador.
+```
+// no código
+
+RequestDispatcher rd = request.getRequestDispatcher("/novaEmpresaCriada.jsp");
+rd.forward(request, response);
+```
+Para jogar algo do código java para o JSP, utilizamos o request do método forward utilizado acima. Para isso penduramos antes na requisição através do `setAttribute` no request.
+```
+// no código
+
+request.setAttribute("empresa", empresa.getNome());
+```
+```
+// no JSP
+String nomeEmpresa = <String> request.getAttribute("empresa");
+System.out.println(nomeEmpresa);
+```
+Os Scriplets dentro do código HTML, assim como código HTML dentro do Java, não são boas práticas. Algumas melhores práticas são: <br>
+- Para imprimirmos uma varíavel no código podemos utilizamos expressões, que tem a seguinte sintaxe: `${ }`.
+```
+<html>
+	<body>
+		Empresa ${empresa} Cadastrada com sucesso!
+	</body>
+</html>
+```
+Podemos também usar uma lib externa de JSP, a JSP JSTL Core, onde fazemos a importação e colocamos o prefixo "c". Para executar o laço, utilizamos a tag `<forEach` dessa lib, que vem antes de definir o laço, utilizando os items e uma expressão. A Lib Core é utilizada para controle de fluxo e para o trabalho de URL.
+```
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ page import = "java.util.List, br.com.otavio.gerenciador.servlet.Empresa"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Java Standar Taglib</title>
+</head>
+<body>
+
+	<ul>
+		<c:forEach items="${empresas}" var="empresa">
+				<li>${empresa.nome} </li>
+		</c:forEach>
+	</ul>
+
+</body>
+</html>
+```
+Uma tag que podemos usar dessa biblioteca é a `<url>`, que precede o atributo `value`, deixando assim uma parte do endereço dinâmico. Dentrodessa expressão é substituído o valor do projeto, como o gerenciador.
+```
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<c:url value="/novaEmpresa" var ="linkServletNovaEmpresa"/>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<form action="${linkServletNovaEmpresa}"  method = "post">
+	
+		Nome: <input type="text" name="nome" />
+	
+		<input type = "Submit" />
+	
+	</form>
+	
+</body>
+</html>
+```
+Outra tag que pode ser utilizada é a `if`, que precede um teste de validação para executar algo.
+```
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+
+<html>
+	<body>
+
+		<c:if test ="${not empty empresa}">
+				Empresa ${empresa} Cadastrada com sucesso!	
+		</c:if>
+
+		<c:if test ="${empty empresa}">
+				Nenhuma empresa cadastrada.	
+		</c:if>
+
+	</body>
+</html>
+```
+Outra taglib da JSTL é a fmt é utilizada para formatação e controle de datas, internacionalização, etc.
+```
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ page import = "java.util.List, br.com.otavio.gerenciador.servlet.Empresa"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Java Standar Taglib</title>
+</head>
+<body>
+
+	<ul>
+		<c:forEach items="${empresas}" var="empresa">
+				<li>${empresa.nome} - <fmt:formatDate value= "${empresa.dataAbertura}" pattern = "dd/MM/yyyy"/> </li>
+		</c:forEach>
+	</ul>
+
+</body>
+</html>
+```
