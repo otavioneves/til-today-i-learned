@@ -196,3 +196,28 @@ Outra taglib da JSTL é a fmt é utilizada para formatação e controle de datas
 </body>
 </html>
 ```
+O despachador pode chamar não somente uma página html, mas também um javascript, um servlet, um jsp, etc. Uma boa prática é evitar que um Servlet chame outro Servlet, e sim que ao ser chamado, o Servlet faça sua parte, retorna uma resposta ao cliente, que irá fazer outra requisição pra outro Servlet, e assim continua. Fazemos esse redirecionamento chamando através do response o método `sendRedirect``.
+```
+		response.sendRedirect("listaEmpresas");
+```
+
+Podemos incluir a atualização e a exclusão para completar o CRUD, que é criar, ler, atualizar e deletar.<br>
+Para remover podemos utilizar o ID (chave primária) no banco de dados, para que seja recebido do Servlet de Delete, que receberá através do getParameter.
+```
+@WebServlet("/removeEmpresa")
+public class RemoveEmpresaServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		String paramId = request.getParameter("id");
+		Integer id = Integer.valueOf(paramId);
+		System.out.println(id);
+		
+		Banco banco = new Banco();
+		banco.removeEmpresa(id);
+		
+	}
+
+}
+```
