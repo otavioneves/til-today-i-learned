@@ -1,0 +1,1 @@
+Podemos começar a entender o padrão MVC a partir de um projeto padrão de Servlets, criando um Servlet de entrada, que receberá e enviará todas as requisições, chamado também de controlador. A função do controlador é receber as requisições e delegar as chamadas para as ações correspondentes.

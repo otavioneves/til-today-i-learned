@@ -222,4 +222,6 @@ public class RemoveEmpresaServlet extends HttpServlet {
 }
 ```
 Quem faz o método main é o TomCat, responsável por criar uma instância do classe Servlet que será chamada. O TomCat cria apenas uma vez a instância, e apenas quando ela for chamado. Ao subirmos o servidor a instância dos servlets não é automaticamente criada, ela é criada apenas quando chamamos a primeira vez o Servlet. Quando for chamar as próximas vezes, não são criadas outras instâncias, reaproveitando a primeira instância. Esse modelo é chamado de singleton. Isso funciona claro enquanto o Tomcat está online, ao reiniciar, começa-se novamente.<br>
-Isso também é chamado de inversão de controle, pois não é o meu método main que instancia o objeto, mas o TomCat.
+Isso também é chamado de inversão de controle, pois não é o meu método main que instancia o objeto, mas o TomCat.<br>
+Podemos colocar o atributo `loanOnStartup` na anotação `@WebServlet`, que altera o comportamento para que o objeto seja criado ao subir o servidor.<br>
+Para fazer o deploy da aplicação podemos criar um WAR, um zip que conterá todos as classes, jsp, xml, etc.
