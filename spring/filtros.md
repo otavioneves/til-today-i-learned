@@ -78,3 +78,105 @@ public class AutorizacaoFilter implements Filter {
 
 }
 ```
+No caso de aplicar esses dois filtros, como usamos anotação, não temos controle de ordem de execução dos filtros. Para ter esse controle, precisamos definir no web.xml.
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>gerenciador</display-name>
+  <welcome-file-list>
+    <welcome-file>bem-vindo.html</welcome-file>
+  </welcome-file-list>
+  
+  <filter>
+  	<filter-name>MF</filter-name>
+  	<filter-class>br.com.otavio.gerenciador.servlet.MonitoramentoFilter</filter-class>
+  </filter>
+  
+  <filter-mapping>
+  	<filter-name>MF</filter-name>
+  	<url-pattern>/entrada</url-pattern>
+  </filter-mapping>
+  
+  <filter>
+  	<filter-name>AF</filter-name>
+  	<filter-class>br.com.otavio.gerenciador.servlet.AutorizacaoFilter</filter-class>
+  </filter>
+  
+  <filter-mapping>
+  	<filter-name>AF</filter-name>
+  	<url-pattern>/entrada</url-pattern>
+  </filter-mapping>
+    
+  
+</web-app>
+```
+Podemos também utilizar os filtros para criar nosso controlador, e utilizar o web.xml para definir que ele rode por último.
+```
+	public class ControladorFilter implements Filter {
+	
+	
+		public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain chain) throws IOException, ServletException {
+	
+			HttpServletRequest request = (HttpServletRequest) servletRequest;	// utilizamos o cast para transformar algo mais genérico em uma referência mais específica, para poder usar os métodos.
+			HttpServletResponse response = (HttpServletResponse) servletResponse;	// utilizando o cast
+			
+			String paramAcao = request.getParameter("acao");	
+			String nomeDaClasse = "br.com.otavio.gerenciador.acao."+ paramAcao;
+			String nome;
+			
+			try {
+				Class classe = Class.forName(nomeDaClasse); // carrega a classe com o nome e me retorna a classe
+				Acao acao = (Acao) classe.newInstance();		// cast para a interface, para poder usar o nmétodo executa
+				nome = acao.executa(request, response);
+			} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | ServletException
+					| IOException e) {
+				throw new ServletException(e);
+			}
+			
+			String[] tipoEndereco = nome.split(":");		// o primeiro índice do array será se é forward ou redirect, o segundo índice do array é o endereço
+			
+			if (tipoEndereco[0].equals("forward")) {
+				RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/view/" + tipoEndereco[1]);
+				rd.forward(request, response);
+			} else {
+				response.sendRedirect(tipoEndereco[1]);
+			}
+		}
+	}
+
+```
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>gerenciador</display-name>
+  
+  <filter>
+  	<filter-name>MF</filter-name>
+  	<filter-class>br.com.otavio.gerenciador.servlet.MonitoramentoFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>MF</filter-name>
+  	<url-pattern>/entrada</url-pattern>
+  </filter-mapping>
+  
+  <filter>
+  	<filter-name>AF</filter-name>
+  	<filter-class>br.com.otavio.gerenciador.servlet.AutorizacaoFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>AF</filter-name>
+  	<url-pattern>/entrada</url-pattern>
+  </filter-mapping>
+    
+  <filter>
+    <filter-name>CF</filter-name>
+    <filter-class>br.com.otavio.gerenciador.servlet.ControladorFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>CF</filter-name>
+    <url-pattern>/entrada</url-pattern>
+  </filter-mapping>
+  
+</web-app>
+```
+O filtro fica antes do controlador e o interceptador depois. O filtro é um componente do mundo de Servlets e se preocupa em filtrar requisições (é ligado ao mundo web), enquanto um interceptador "filtra" chamadas de ações ou outros métodos. Os interceptadores são específicos do framework (por exemplo, Spring) e até funciona sem Servlets.
