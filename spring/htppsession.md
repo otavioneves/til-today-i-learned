@@ -4,5 +4,8 @@ Quando o servidor vê a requisição pela primeira vez, ele cria essa seção, c
 HttpSession sessao = request.getSession();
 sessao.setAttribute("usuarioLogado", usuario);
 ```
-
 O HttpSession é utilizado para guardar informações do usuário durante uma requisição.
+
+Para invalidarmos (ou seja, encerrarmos) uma HttpSession, podemos utilizar o método `invalidate()`, que irá encerrar a sessão e seus associados, e remover o cookie.
+
+O servidor cria um objeto da HttpSession a cada navegador que acessa a aplicação. Caso o navegador fique mais de 30 minutos (no caso do Tomcat 9), a HttpSession é encerrada.
