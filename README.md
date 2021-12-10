@@ -123,10 +123,10 @@ Hoje eu aprendi - Uma coleção de pequenos tópicos que eu aprendo sobre lingua
 
 ### Java na Web
 - [Filtros](javaweb/filtros.md)
-- [](javaweb/httpsession.md)
-- [](javaweb/mvc.md)
-- [](javaweb/servlets.md)
-- [](javaweb/webservice.md)
+- [HttpSession](javaweb/httpsession.md)
+- [MVC](javaweb/mvc.md)
+- [Servlets](javaweb/servlets.md)
+- [WebService](javaweb/webservice.md)
 
 ### MySQL
 - [Administração do Banco](mysql/administracao.md)
