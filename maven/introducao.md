@@ -1,0 +1,3 @@
+O Maven é uma ferramenta de build e de gerenciamento de dependências. O download é simples e a execução pode ser feita pela linha de comando ou pela integração com a IDE. No Eclipse podemos criar um projeto já com uma arquitetura inicial, como um projeto que é para web, ou podemos criar um projeto simples, que já adiciona as pastas de source e o arquivo pom.xml, aonde fazemos as configuração do maven.<br>
+Na pasta resources recebe os arquivos de propriedas, do hibernate, de configuração dos frameworks, as páginas, arquivos estáticos, etc.<br>
+As pastas de testes recebem as classes de testes, e a resources recebem os arquivos de recursos/configuração dos testes, com o Selenium.<br>

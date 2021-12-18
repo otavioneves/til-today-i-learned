@@ -1,0 +1,1 @@
+Antes do Java 9, podiamos fazer uma modularização da aplicação através do Maven, aonde módulos tinham dependências de outros módulos. O módulo é considerado também uma dependência. Precisamos também ter o projeto raiz.
