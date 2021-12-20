@@ -104,4 +104,30 @@ Podemos fazer esses métodos de outra maneira, por exemplo, para inserção, pod
 	}
 ```
 
-Com isso, o que digitarmos na variavel nome e descricao será colocado através do set, e não como uma String. Todas as 
+Com isso, o que digitarmos na variavel nome e descricao será colocado através do set, e não como uma String.<br>
+As inserções ou alterações no banco de dados devem ser entrelaçadas de modo que todo o procedimento é feito, ou a operação é cancelada. Caso dê algum erro em alguma etapa do proceso, todo processo é desfeito. Podemos fazer essa alteração de espera para verificação utilizando o método `.setAutoCommit`. Para definirmos quando o commit deve ser feito, utilizamos o método `.commit`, no Connection. Caso tivermos algum erro, podemos fazer o rollback, desfazendo o procedimento, através do método `.rollback`.
+
+```
+	public static void main(String[] args) throws SQLException {
+
+		ConnectionFactory criaConexao = new ConnectionFactory();
+		Connection con = criaConexao.recuperarConexao();	
+		con.setAutoCommit(false);
+
+		try {
+			PreparedStatement stm = con.prepareStatement("INSERT INTO PRODUTO (nome,descricao) VALUES (?,?)",Statement.RETURN_GENERATED_KEYS);
+
+			adicionarVariavel("SmartTV", "45 Polegadas", stm);
+			adicionarVariavel("Radio", "Radio de Bateria", stm);
+			
+			con.commit();
+
+			stm.close();		
+			con.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("Rollback executado.");
+			con.rollback();
+		}
+	}
+```
