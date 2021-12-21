@@ -3,37 +3,13 @@ Today I Learned - A collection a small topics that I learn about languages, tech
 Hoje eu aprendi - Uma coleção de pequenos tópicos que eu aprendo sobre linguagens, tecnologias e ferramentas.
 
 ### Categorias
-- Git
 - Java
 - Java e Orientação à Objetos
+- Java WebServices
 - Classes do Java
 - Estrutura de Dados em Java
 - Testes
 - MySQL
-
-### Git
-- [Bisect](git/bisect.md)
-- [Blame](git/blame.md)
-- [Boas práticas no uso do Git](git/boas-praticas.md)
-- [Branches](git/branch.md)
-- [Cherry pick](git/cherry-pick.md)
-- [Clone](git/clonar-repositorio.md)
-- [Comandos básicos](git/comandos-basicos.md)
-- [Commits](git/commit.md)
-- [Configuração de usuário](git/configurar-usuario.md)
-- [Desfazendo alterações](git/desfazendo-alteracoes.md)
-- [Diff](git/diff.md)
-- [Git Flow](git/git-flow.md)
-- [Histórico do Git](git/historico.md)
-- [Hooks](git/eventos-hooks.md)
-- [Ignorar arquivos e pastas](git/ignorar-arquivos.md)
-- [Log](git/histórico.md)
-- [Merge](git/merge.md)
-- [Push e Pull](git/push-pull.md)
-- [Rebase](git/rebase.md)
-- [Repositórios remotos](git/repositorio-remoto.md)
-- [Stash](git/stash.md)
-- [Tags e Releases](git/tags-e-realeases.md)
 
 ### Java
 - [Anotations](java/anotacoes.md)
@@ -89,6 +65,13 @@ Hoje eu aprendi - Uma coleção de pequenos tópicos que eu aprendo sobre lingua
 - [Polimorfismo](java/polimorfismo.md)
 - [TimeZone](timezone.md)
 
+### Java WebServices
+- [Filtros](filtros.md)
+- [HttpSession](httpsession.md)
+- [MVC](mvc.md)
+- [Servlets](servlets.md)
+- [WebService](webservice.md)
+
 ### Classes do Java
 - [API de Datas](java/api-de-datas.md)
 - [BigInteger e BigDecimal](java/bigdecimal-biginteger.md)
@@ -116,17 +99,48 @@ Hoje eu aprendi - Uma coleção de pequenos tópicos que eu aprendo sobre lingua
 - [Maps](java/java.md)
 - [Ordenação de Listas](java/ordenacao-de-listas.md)
 
+### JDBC
+- [Camadas](camadas.md)
+- [Evitando Queries N+1](evitando-queries-n-mais-1.md)
+- [Introdução](introducao.md)
+- [Persistencia](persistencia.md)
+- [Pool de Requisições](pool.md)
+
 ### Testes
 - [JUnit](testes/junit.md)
 - [TDD](testes/TDD.md)
 - [Testes Automatizados](testes/testes-automatizados.md)
 
-### Java na Web
-- [Filtros](javaweb/filtros.md)
-- [HttpSession](javaweb/httpsession.md)
-- [MVC](javaweb/mvc.md)
-- [Servlets](javaweb/servlets.md)
-- [WebService](javaweb/webservice.md)
+### Maven
+- [Build](build.md)
+- [Gestão de Dependências](gestao-de-dependencias.md)
+- [Introducao](introducao.md)
+- [Modulos](modulos.md)
+- [Plugins](plugins.md)
+
+### Git
+- [Bisect](git/bisect.md)
+- [Blame](git/blame.md)
+- [Boas práticas no uso do Git](git/boas-praticas.md)
+- [Branches](git/branch.md)
+- [Cherry pick](git/cherry-pick.md)
+- [Clone](git/clonar-repositorio.md)
+- [Comandos básicos](git/comandos-basicos.md)
+- [Commits](git/commit.md)
+- [Configuração de usuário](git/configurar-usuario.md)
+- [Desfazendo alterações](git/desfazendo-alteracoes.md)
+- [Diff](git/diff.md)
+- [Git Flow](git/git-flow.md)
+- [Histórico do Git](git/historico.md)
+- [Hooks](git/eventos-hooks.md)
+- [Ignorar arquivos e pastas](git/ignorar-arquivos.md)
+- [Log](git/histórico.md)
+- [Merge](git/merge.md)
+- [Push e Pull](git/push-pull.md)
+- [Rebase](git/rebase.md)
+- [Repositórios remotos](git/repositorio-remoto.md)
+- [Stash](git/stash.md)
+- [Tags e Releases](git/tags-e-realeases.md)
 
 ### MySQL
 - [Administração do Banco](mysql/administracao.md)
