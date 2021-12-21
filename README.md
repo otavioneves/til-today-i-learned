@@ -8,7 +8,9 @@ Hoje eu aprendi - Uma coleção de pequenos tópicos que eu aprendo sobre lingua
 - Java WebServices
 - Classes do Java
 - Estrutura de Dados em Java
+- JDBC
 - Testes
+- Maven
 - MySQL
 
 ### Java
