@@ -42,3 +42,24 @@ Além de adicionar as entidades como classes, precisamos passar dentro do arquiv
 ```
 <class>br.com.otavio.loja.modelo.Produto</class>
 ```
+
+Podemos colocar o EntityManager também em uma classe DAO, que também será responsável pela parte do código que se repetirá nos vários tipos de requisições ao banco de dados. A classe DAO não é responsável por criar e gerenciar o EntityManager, ela já recebe o EntityManager no construtor.
+
+```
+public class ProdutoDAO {
+
+	private EntityManager em;
+
+	public ProdutoDAO(EntityManager em) {
+		super();
+		this.em = em;
+	}
+	
+	public void cadastrar(Produto produto) {
+		this.em.persist(produto);
+	}	
+	
+}
+```
+
+Com o JPA, o acoplamento com o banco de dados fica muito menor, já que caso ocorra alguma alteração, fazemos a mudança apenas na classe da entidade. A classe DAO não trabalha diretamente com os nomes das colunas da tabela.

@@ -47,3 +47,21 @@ Além do arquivo pom.xml, precisamos também do persistence.xml, adicionado na p
 
 </persistence>
 ```
+Uma propriedade que podemos colocar no persistence.xml é a format_sql, que identa e formata o SQL no log do console.
+```
+<property name="hibernate.format_sql" value="true" />
+```
+<br>
+Para explicitar para o Hibernate qual é o tipo da coluna de uma variável que for adicionada, mas que não seja explicíto (como int, String, Date, etc), como um Enum do Java, precisamos utilizar a anotação @Enumerated.
+
+```
+	@Enumerated(EnumType.STRING)
+	private Categoria categoria;
+```
+
+Para persistir uma entidade que tem uma ligação (Chave Estrangeira, FK) com outra entidade, essa outra entidade precisa estar persistida antes. Para os relacionamentos de chave estrangeira usamos as anotações para informar qual a cardinalidade dessa FK, como por exemplo, muitos para um (@ManyToOne), sendo que é obrigatório adicionar alguma anotação de cardinalidade em todos os atributos que representam relacionamentos.
+
+```
+	@ManyToOne		// informa que a relação de Produto e Categoria é muitos pra um
+	private Categoria categoria;
+```

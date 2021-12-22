@@ -9,6 +9,7 @@ Hoje eu aprendi - Uma coleção de pequenos tópicos que eu aprendo sobre lingua
 - Classes do Java
 - Estrutura de Dados em Java
 - JDBC
+- JPA
 - Testes
 - Maven
 - MySQL
@@ -107,6 +108,13 @@ Hoje eu aprendi - Uma coleção de pequenos tópicos que eu aprendo sobre lingua
 - [Introdução](introducao.md)
 - [Persistencia](persistencia.md)
 - [Pool de Requisições](pool.md)
+
+### JPA
+- [Consultas usando JPQL](consultas-jpql.md)
+- [EntityManager](entity-manager.md)
+- [Estados de uma Entidade](estados-da-entidade.md)
+- [Introdução](introducao.md)
+- [Persistencia](persistencia.md)
 
 ### Testes
 - [JUnit](testes/junit.md)
