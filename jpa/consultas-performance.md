@@ -1,0 +1,1 @@
+Para melhorarmos a performance de consulta no JPA. A perda de formance acontece devido ao mapeamento, aonde por termos relacionamento de FK que possua ToOne, por padrão a JPA puxa
