@@ -110,11 +110,18 @@ Hoje eu aprendi - Uma coleção de pequenos tópicos que eu aprendo sobre lingua
 - [Pool de Requisições](pool.md)
 
 ### JPA
+- [Consultas Avançadas](consultas-avancadas.md)
 - [Consultas usando JPQL](consultas-jpql.md)
+- [Criteria API](criteria-api.md)
+- [Embeddable](embeddable.md)
 - [EntityManager](entity-manager.md)
 - [Estados de uma Entidade](estados-da-entidade.md)
 - [Introdução](introducao.md)
+- [Mapeamento de Chaves Compostas](mapeamento-chave-composta.md)
+- [Mapeamento de Herança](mapeamento-heranca.md)
+- [Performance de Consultas](consultas-performance.md)
 - [Persistencia](persistencia.md)
+
 
 ### Testes
 - [JUnit](testes/junit.md)

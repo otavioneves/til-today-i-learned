@@ -1,0 +1,1 @@
+Para fazer o mapeamento de entidades que tem chave composta extraímos os atributos que vão fazer parte da chave composta para outra classe, e aí o atributo dessa nova classe vira a PK na classe atual. A classe nova será Embeddable e o atributo na classe atual será @EmbeddedId.
