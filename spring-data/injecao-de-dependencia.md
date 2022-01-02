@@ -1,0 +1,3 @@
+O conceito de dependência é um pedaço de código que depende de outro para funcionar. Quando neccessitamos de alguma dependência, como configuração do banco de dados, temos que tomar cuidado para não repetir código. Para corrigir isso isolamos a parte do código que a dependência precisa e que se repete. No caso da conexão com o banco de dados, podemos criar a conexão com o banco já no construtor.<br>
+O conceito de injeção de dependência é criar uma instância de uma classe centralizada que faz o serviço.<br>
+O conceito de inversão de dependência é que o ideal é dependermos de interfaces ao que depender de implementações, facilitando assim com que o código dependa mais de abstrações.
