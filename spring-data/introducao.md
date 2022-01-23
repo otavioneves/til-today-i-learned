@@ -50,3 +50,4 @@ Para criarmos um registro no banco de dados utilizamos a instancia criada dando 
 		
 	}
 ```
+Para fazermos uma inserção manualmente, precisamos criar uma estância de CargoRepository,
