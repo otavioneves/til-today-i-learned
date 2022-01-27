@@ -82,3 +82,7 @@ List<Funcionario> findByUnidadeTrabalhos_Descricao(String descricao);
 	@Query(value = "SELECT * FROM funcionarios f WHERE f.data >= data", nativeQuery = true)		// o argumento nativeQuery informa que escrevemos a consulta conforme é feito no banco. Se não escrevermos isso ele entender que é um JPQL
 	List<Funcionario> findDataContratacaoMaior(LocalDate data);
 ```
+
+- Derived Queries - queries criadas através de comandos Java
+- JPQL - queries criadas através de uma estrutura SQL, porém com os nomes das entidades Java
+- Native Query - queries padrões SQL que conseguimos executar no nosso Client SQL
