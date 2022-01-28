@@ -29,3 +29,5 @@ public class HelloController {
 	</body>
 </html>
 ```
+Para fazermos qualquer página da aplicação podemos utilizar o mesmo princípio de controller, model e as páginas HTMLs feitas em BootStrap e Thymeleaf.<br>
+As classes controller são gerenciadas pelo Spring, então não precisamos criar instâncias das mesmas, assim como uma classe EntityManager do JPA.<br>
