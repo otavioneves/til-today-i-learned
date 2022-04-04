@@ -32,4 +32,5 @@ public class HelloController {
 Para fazermos qualquer página da aplicação podemos utilizar o mesmo princípio de controller, model e as páginas HTMLs feitas em BootStrap e Thymeleaf.<br>
 As classes controller são gerenciadas pelo Spring, então não precisamos criar instâncias das mesmas, assim como uma classe EntityManager do JPA.<br>
 Uma classe DTO, Data Transfer Object, é uma classe que serve apenas para transferir objetos. O nome dos atributos da classe tem que ter os mesmos names dos inputs. Utilizamos essas classes DTO pois queremos evitar uma falha de segurança chamada Web Parameter Tampering, que é quando se utilizassemos a classe Pedido diretamente, fosse possível alterar, por manipulação, outros atributos da classe além dos presentes no formulário, evitamos também expor o nosso modelo.<br>
-Além disso, qualquer mudança na classe modelo causaria uma mudança no HTML.
+Além disso, qualquer mudança na classe modelo causaria uma mudança no HTML.<br>
+Para fazermos redirecionamentos como resultado dos métodos, podemos utilizar o redirect ou o forward. O redirect faz o redirecionamento cliente-side, ou seja, faz uma nova requisição para a URL passada. Já o forward faz o redirecionamento server-side, ou seja, dentro da mesma requisição HTTP. Após fazermos uma requisição POST, sempre usamos redirect.
