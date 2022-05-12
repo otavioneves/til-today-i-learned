@@ -74,3 +74,10 @@ Arquivo pom.xml do Mavem:
 	</plugin>
 </build>
 ```
+
+### Links Importantes
+- Spring-Boot [http://projects.spring.io/spring-boot/]
+- Appendix F. Dependency versions [https://docs.spring.io/spring-boot/docs/1.5.10.RELEASE/reference/htmlsingle/#appendix-dependency-versions]
+- Spring MVC [https://docs.spring.io/spring-boot/docs/1.5.10.RELEASE/reference/htmlsingle/#howto-spring-mvc]
+- Use Thymeleaf 3 [https://docs.spring.io/spring-boot/docs/1.5.10.RELEASE/reference/htmlsingle/#howto-use-thymeleaf-3]
+- Appendix A. Common application properties [https://docs.spring.io/spring-boot/docs/1.5.10.RELEASE/reference/htmlsingle/#appendix]
