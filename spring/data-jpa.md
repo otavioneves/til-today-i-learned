@@ -136,4 +136,122 @@ Após isso criamos uma classe DaoImpl, que implementará uma classe Dao.
 
 ```
 
-A melhor prática para gerenciar transações é utilizar na camada de serviço, com a anotação @Transactional. Essa anotação recebe o atributo readOnly, que ao ser definido como true, informa que o método não faz nenhuma transação no banco de ados, e apenas lê. Quando uma transação é aberta no banco de dados, a tabela fica travada, já na leitura não. Os métodos de consulta recebe o atributo readOnly = true. O sistema de transações fica na camada service pois o rollback da camada dao não faz o rollback total de um método, no caso de algum erro. Na camada service, caso alguma parte do método tenha algum problema, ele da rollback no método inteiro, evitando pontas soltas.
+A melhor prática para gerenciar transações é utilizar na camada de serviço, com a anotação @Transactional. Essa anotação recebe o atributo readOnly, que ao ser definido como true, informa que o método não faz nenhuma transação no banco de ados, e apenas lê. Quando uma transação é aberta no banco de dados, a tabela fica travada, já na leitura não. Os métodos de consulta recebe o atributo readOnly = true. O sistema de transações fica na camada service pois o rollback da camada dao não faz o rollback total de um método, no caso de algum erro. Na camada service, caso alguma parte do método tenha algum problema, ele da rollback no método inteiro, evitando pontas soltas. Os métodos herdam a anotação de Transactional colocada na classe, por isso, podemos ter os seguintes cenários:
+```
+@Service
+@Transactional(readOnly = false)
+public class CargoServiceImpl implements CargoService{
+	
+	@Autowired
+	private CargoDao cargoDao;
+	
+
+	@Override
+	public void salvar(Cargo cargo) {
+		cargoDao.save(cargo);
+	}
+
+	@Override
+	public void editar(Cargo cargo) {
+		cargoDao.update(cargo);		
+	}
+
+	@Override
+	public void excluir(Long id) {
+		cargoDao.delete(id);
+	}
+
+	@Override @Transactional(readOnly=true)
+	public Cargo buscarPorId(Long id) {
+		return cargoDao.findById(id);
+	}
+
+	@Override @Transactional(readOnly=true)
+	public List<Cargo> buscarTodos() {
+		return cargoDao.findAll();
+	}
+	
+}
+```
+
+```
+@Service
+public class DepartamentoServiceImpl implements DepartamentoService {
+
+	DepartamentoDao departamentoDao;
+	
+	@Transactional(readOnly=false)
+	@Override
+	public void salvar(Departamento departamento) {
+		departamentoDao.save(departamento);
+	}
+
+	@Transactional(readOnly=false)
+	@Override
+	public void editar(Departamento departamento) {
+		departamentoDao.update(departamento);
+	}
+
+	@Transactional(readOnly=false)
+	@Override
+	public void excluir(Long id) {
+		departamentoDao.delete(id);
+	}
+
+	@Transactional(readOnly=true)
+	@Override
+	public Departamento buscarPorId(Long id) {
+		
+		return departamentoDao.findById(id);
+	}
+
+	@Transactional(readOnly=true)
+	@Override
+	public List<Departamento> buscarTodos() {
+		
+		return departamentoDao.findAll();
+	}
+
+}
+```
+
+```
+@Transactional(readOnly=true)
+@Service
+public class FuncionarioServiceImpl implements FuncionarioService {
+
+	@Autowired
+	FuncionarioDao funcionarioDao;
+	
+	@Transactional(readOnly=false)
+	@Override
+	public void salvar(Funcionario funcionario) {
+		funcionarioDao.save(funcionario);
+	}
+
+	@Transactional(readOnly=false)
+	@Override
+	public void editar(Funcionario funcionario) {
+		funcionarioDao.update(funcionario);
+	}
+
+	@Override
+	public void excluir(Long id) {
+		funcionarioDao.delete(id);
+	}
+
+	@Override
+	public Funcionario buscarPorId(Long id) {
+		
+		return funcionarioDao.findById(id);
+	}
+
+	@Override
+	public List<Funcionario> buscarTodos() {
+		
+		return funcionarioDao.findAll();
+	}
+
+}
+
+```
