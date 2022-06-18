@@ -61,3 +61,26 @@ NotBlank.requisicaoNovoPedido.nomeProduto=Campo obrigatório
 NotBlank.requisicaoNovoPedido.urlProduto=Campo obrigatório
 NotBlank.requisicaoNovoPedido.urlImagem=Campo obrigatório
 ```
+
+
+Outro modo é utilizando anotações na classe de Domínio.
+- @NotBlank(message="O nome do cargo é obrigatório."): obrigatoriedade em não deixar branco.
+- @Size(max=60, message = "O nome do cargo deve conter no máximo {max} caracteres."): obrigatoriedade no tamanho do item.
+
+Após marcar os atributos com essas anotações, vamos na classe Controller respectiva e adicionamos nos atributos dos métodos que fazem alterações nos campos, a anotação @Valid na frente do atributo à ser validade, e o atributo BindingResult para verificação de houve algum erro nas validações.
+
+```
+@PostMapping("/salvar")
+	public String salvar(@Valid Departamento departamento, BindingResult result, RedirectAttributes attr) {
+		
+		if(result.hasErrors()) {
+			return "/cargo/cadastro";
+		}
+		
+		departamentoService.salvar(departamento);
+		attr.addFlashAttribute("success", "Departamento inserido com sucesso.");
+		return "redirect:/departamentos/cadastrar";
+	}
+```
+
+No HTML, podemos criar um fragment e chamar nos formulários.
