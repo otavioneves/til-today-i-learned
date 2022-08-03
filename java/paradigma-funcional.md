@@ -41,3 +41,13 @@ Funcao1 funcao1 = valor -> System.out.println(valor);
 - Predicate: uma interface funcional que recebe um parâmetros e retorna um booleano.
 - Supplier: uma interface funcional que não recebe um parâmetro, e retorna algo que é definido no generics.
 
+```
+Stream.of(nomes)
+    .forEach(System.out::println);
+```
+
+```
+Stream.of(numeros)
+    .map(numero -> numeros * 2)         // multiplica cada número do array números por 2
+    .forEach(System.out::println);
+```

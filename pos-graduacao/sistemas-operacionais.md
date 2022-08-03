@@ -17,3 +17,4 @@ Cabe ao gerenciador de memória comandar a hierarquia da memória de modo a:
 - liberar a memória, quando um processo terminar;
 - tratar do problema de swapping, isto é, quando a memória é insuficiente.
 
+### Arquivo
