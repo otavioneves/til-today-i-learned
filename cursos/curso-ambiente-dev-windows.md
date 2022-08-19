@@ -4,3 +4,5 @@
 ### Definir diretório /home no padrão no WSL
 - Alterar no profiles.json
 
+### Autenticação via SSH no WSL
+SSH são chaves utilizadas em serviços para autenticar o usuário automaticamente.
