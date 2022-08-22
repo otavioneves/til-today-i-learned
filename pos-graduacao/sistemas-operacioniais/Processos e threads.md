@@ -86,3 +86,11 @@ a. Bloqueio em duas fases (two-phase blocking): atende à necessidade dos sistem
 b. Impasse de comunicação: pode ocorrer quando um processo X envia uma mensagem para o processo Y e fica bloqueado até que a mensagem de retorno seja recebida.<br>
 c. Livelock: pode acontecer quando a tabela de processos do sistema operacional está cheia e um processo que tenta criar threads descobre isso. Ele não consegue criar os threads naquele momento, sendo obrigado a esperar um pouco e fazer uma nova tentativa. O UNIX e o Windows ignoram o problema de livelock, uma vez que consideram que sua ocorrência é menos traumática do que limitar a experiência do usuário.<br>
 d. Condição de inanição (starvation): pode acontecer quando um processo nunca tenha acesso a um recurso que está solicitando.
+
+
+### Seção 6
+- Quando um computador possui vários processos ou threads no estado de pronto e apenas um processador livre para atendê-los, o sistema operacional precisa usar um escalonador, que usa o algoritmo de escalonamento para chegar a uma decisão.
+- Os algoritmos de escalonamento podem ser divididos em duas categorias com relação às interrupções de E/S: na primeira, o algoritmo de escalonamento não preemptivo escolhe um processo para execução e o executa até que ele seja bloqueado, para uma requisição de E/S, por outro processo, ou quando o processo libera a CPU por conta própria; na segunda, o algoritmo de escalonamento preemptivo escolhe um processo para execução e o executa por um tempo máximo definido.
+- Há três categorias de algoritmos de escalonamento: os sistemas em lote, os sistemas interativos e os sistemas com restrição de tempo real.<br>
+Os sistemas em lote são utilizados em empresas que operam com atividades realizadas periodicamente, como folhas de pagamento, contas a pagar etc. Neles, não há terminais de usuários aguardando pela resposta da execução dos processos, logo, os algoritmos de escalonamento preemptivos e não preemptivos são aceitáveis.
+- 
