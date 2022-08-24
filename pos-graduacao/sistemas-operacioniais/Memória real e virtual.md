@@ -1,0 +1,15 @@
+### Seção 1
+- A memória real atua como um depósito de instruções e dados gerados pelos programas em execução no computador. Ela auxilia o processador no andamento dos programas e, por ser volátil – isto é, por perder seus dados quando o computador é desligado –, trabalha com a memória secundária (disco rígido) para realizar o armazenamento dos dados de modo permanente.
+- A memória real, também conhecida como memória física, memória principal, memória primária ou, simplesmente, memória, é o único componente do computador acessado diretamente pela CPU, que lê continuamente as instruções armazenadas nela e executa-as.
+- A memória real sempre foi considerada um recurso relativamente caro.
+- O sistema operacional faz uso do gerenciador de memória para organizar e definir as estratégias de gestão de memória, que determinam qual organização deverá ser utilizada, mediante diferentes cargas de processos. Ele define a maneira com que o espaço livre é alocado pelos processos e como atuar diante das possíveis mudanças na utilização de memória dos processos
+- As estratégias de gerenciamento de memória são divididas nas seguintes categorias:<br>
+a. Estratégia de busca: determina qual próxima parte de um programa ou de um conjunto de dados será transferida para a memória principal. É dividida em dois tipos: sob demanda, na qual a transferência ocorre somente quando é referenciada por um programa em execução; ou antecipada, quando isso é feito antes de o programa ou os dados serem referenciados.<br>
+b. Estratégia de posicionamento: estabelece qual lugar da memória principal deverá ser ocupado pelos programas e dados que estão chegando. É dividida em três tipos: first fit (FF), traduzido como primeiro que couber; best fit (BF), ou seja, melhor que couber; e worst fit (WF), ou pior que couber.<br>
+c. Estratégia de substituição: indica quais dados deverão ser removidos da memória principal para liberar espaço para um novo programa.
+- A memória virtual, que buscava solucionar o problema de pouco espaço de memória real, criando uma ilusão de que existe mais memória do que realmente a máquina possui.
+- A fragmentação externa ocorre quando a soma de todas as lacunas é grande o suficiente para acomodar um processo, mas cada uma delas é pequena demais para fazer o mesmo. Para evitar a fragmentação externa, o sistema operacional verifica se existe alguma partição livre e adjacente à lacuna. Se sim, ele transforma essas duas partições em uma maior, que poderá acomodar um processo. Outra estratégia é a compactação de memória, na qual as áreas ocupadas são enviadas para uma das extremidades da memória principal, criando uma grande área livre e contígua. Esse processo de compactação é chamado de coleta de lixo (garbage collector), que possui como desvantagem a necessidade de realocar os processos em execução e impedir que novos processos sejam inicializados durante a compactação.
+
+### Seção 2
+- A memória virtual busca solucionar o problema de pouco espaço de memória real, criando uma ilusão de que existe mais memória do que realmente a máquina possui.
+- 
